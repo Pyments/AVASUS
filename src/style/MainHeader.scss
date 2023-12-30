@@ -1,0 +1,22 @@
+header {
+  border: 1px solid black;
+  ul {
+    border: 1px solid black !important;
+    li {
+      border: 1px solid black !important;
+    }
+  }
+}
+.main-header {
+    background-color: #ffffff;
+  .list-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 15vh;
+    text-wrap: nowrap;
+    padding: 0px;
+    margin: 0 auto;
+  }
+}
