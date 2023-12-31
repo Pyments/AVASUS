@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
-
 import App from "./App.tsx";
 import Home from "./routes/Home.tsx";
-import Contact from "./routes/Contact.tsx";
+import Contact from "./routes/Contato.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 
 const router = createBrowserRouter([
