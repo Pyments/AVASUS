@@ -5,7 +5,11 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import App from "./App.tsx";
 import Home from "./routes/Home.tsx";
-import Contact from "./routes/Contato.tsx";
+import Sobre from "./routes/Sobre.tsx";
+import Cursos from "./routes/Cursos.tsx";
+import Parceiros from "./routes/Parceiros.tsx";
+import Transparencia from "./routes/Transparencia.tsx";
+import Contato from "./routes/Contato.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 
 const router = createBrowserRouter([
@@ -19,8 +23,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/contact",
-        element: <Contact />,
+        path: "/sobre",
+        element: <Sobre />,
+      },
+      {
+        path: "/cursos",
+        element: <Cursos />,
+      },
+      {
+        path: "/parceiros",
+        element: <Parceiros />,
+      },
+      {
+        path: "/transparencia",
+        element: <Transparencia />,
+      },
+      {
+        path: "/contato",
+        element: <Contato />,
       },
     ],
   },

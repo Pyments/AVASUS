@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     text-wrap: nowrap;
+    a {
+      text-decoration: none;
+    }
     .list-group-item {
       padding: 0.4em 0.7em;
       font-size: clamp(0.2rem, 0.2rem + 1vw, 2rem);
