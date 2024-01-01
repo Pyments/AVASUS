@@ -1,4 +1,4 @@
-import "../style/MainHeader.scss";
+import "../style/components/MainHeader.scss";
 import { Link } from "react-router-dom";
 
 const MainHeader = () => {
