@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const MainHeader = () => {
   return (
     <>
-      <header className="main-header">
+      <header className="navbar">
         <ul className="list-group">
           <Link to="/">
             <li className="list-group-item">
-              <img src="#" alt="Logo AVASUS" />
+              <img src="./src/assets/logo-small.png" alt="Logo AVASUS" />
             </li>
           </Link>
 
