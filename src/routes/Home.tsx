@@ -6,9 +6,11 @@ import Parceiros from "./Parceiros";
 const Home = () => {
    return (
     <main>
-      <h1>Inicio</h1>
+      <div>image slider goes here</div>
       <ImageSlider />
+      <div>modulos_small here</div>
       <ModulosEducacionais_small />
+      <div>parceiros here</div>
       <Parceiros />  
     </main>
   );
