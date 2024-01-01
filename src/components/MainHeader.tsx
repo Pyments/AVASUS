@@ -1,40 +1,40 @@
-import "../style/MainHeader.scss";
+import "../style/components/MainHeader.scss";
 import { Link } from "react-router-dom";
 
 const MainHeader = () => {
   return (
     <>
-      <header className="main-header">
-        <ul className="list-group">
+      <nav className="navbar">
+        <ul className="navbar-group">
           <Link to="/">
-            <li className="list-group-item">
-              <img src="#" alt="Logo AVASUS" />
+            <li className="navbar-group-item">
+              <img src="./src/assets/logo-small.png" alt="Logo AVASUS" />
             </li>
           </Link>
 
           <Link to="/">
-            <li className="list-group-item">Início</li>
+            <li className="navbar-group-item">Início</li>
           </Link>
           <Link to="/sobre">
-            <li className="list-group-item">Sobre Nós</li>
+            <li className="navbar-group-item">Sobre Nós</li>
           </Link>
           <Link to="/cursos">
-            <li className="list-group-item">Cursos</li>
+            <li className="navbar-group-item">Cursos</li>
           </Link>
           <Link to="/parceiros">
-            <li className="list-group-item">Parceiros</li>
+            <li className="navbar-group-item">Parceiros</li>
           </Link>
           <Link to="/transparencia">
-            <li className="list-group-item">Transparência</li>
+            <li className="navbar-group-item">Transparência</li>
           </Link>
           <Link to="/contato">
-            <li className="list-group-item">Contato</li>
+            <li className="navbar-group-item">Contato</li>
           </Link>
-          <li className="list-group-item header-searchbar">===Searchbar===</li>
-          <li className="list-group-item">Entrar</li>
-          <li className="list-group-item">Cadastrar</li>
+          <li className="navbar-group-item header-searchbar">===Searchbar===</li>
+          <li className="navbar-group-item"><button className="nav-button nav-button-entrar">Entrar</button></li>
+          <li className="navbar-group-item"><button className="nav-button nav-button-cadastrar">Cadastrar</button></li>
         </ul>
-      </header>
+      </nav>
     </>
   );
 };

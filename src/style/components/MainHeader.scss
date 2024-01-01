@@ -1,0 +1,46 @@
+@import "../variables";
+
+.navbar {
+  padding: 0;
+  margin: 0 auto;
+  min-height: 50px;
+  width: 100%;
+  background-color: $bw-color-grade-2;
+  align-items: center;
+  justify-content: center;
+  .navbar-group {
+    background-color: $bw-color-grade-2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    .navbar-group-item {
+      color: $bw-color-grade-5;
+      letter-spacing: $letter-spacing-mid;
+      padding: 0.8rem 0.5rem;
+      padding-bottom: 0rem;
+      font-size: clamp(0.2rem, 0.2rem + 1vw, 2rem);
+      img {
+        width: 100%;
+      }
+      .nav-button {
+        border: solid 1px $bw-color-grade-4;
+        border-radius: 1rem;
+        box-shadow: none;
+      }
+      .nav-button-entrar {
+        background-color: $bw-color-grade-2;
+        color: $bw-color-grade-5;
+      }
+      .nav-button-cadastrar{
+        background-color: $bw-color-grade-3;
+        color: $bw-color-grade-2;
+      }
+    }
+  }
+}
