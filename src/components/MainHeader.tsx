@@ -30,7 +30,7 @@ const MainHeader = () => {
           <Link to="/contato">
             <li className="navbar-group-item">Contato</li>
           </Link>
-          <li className="navbar-group-item header-searchbar">===Searchbar===</li>
+          <li className="navbar-group-item"><input type="text" id="nav-searchbar" placeholder="Pesquisar..."/></li>
           <li className="navbar-group-item"><button className="nav-button nav-button-entrar">Entrar</button></li>
           <li className="navbar-group-item"><button className="nav-button nav-button-cadastrar">Cadastrar</button></li>
         </ul>
