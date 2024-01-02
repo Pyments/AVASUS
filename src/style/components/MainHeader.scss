@@ -31,14 +31,14 @@
         width: 80%;
       }
       .nav-button {
-        border: solid 1px $ui-dark;
+        border: solid 1px $ui-grey;
         border-radius: 10rem;
         padding: 0.3rem 0.8rem;
         box-shadow: none;
       }
       .nav-button-entrar {
-        background-color: $ui-grey;
-        color: $ui-darkest;
+        background-color: $ui-lightest;
+        color: $ui-darker;
       }
       .nav-button-cadastrar {
         background-color: $ui-grey;
