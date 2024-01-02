@@ -3,12 +3,14 @@ $letter-spacing-min: 0rem;
 $letter-spacing-mid: 0.08rem;
 $letter-spacing-max: 0.1rem;
 
-//Colors grades
-$bw-color-grade-1: #ffffff;
-$bw-color-grade-2: #f0f0f0;
-$bw-color-grade-3: #707070;
-$bw-color-grade-4: #606060;
-$bw-color-grade-5: #030302;
+//Color variables
+$ui-lightest: #ffffff;
+$ui-lighter: #f5f5f7;
+$ui-light: #808181;
+$ui-grey: #707070;
+$ui-dark: #424146;
+$ui-darker: #323237;
+$ui-darkest: #2e2e40;
 
-$red-grade-1: #f7313f;
-$red-grade-1: #d2202c;
+$red-ligh: #f7313f;
+$red-dark: #d2202c;
