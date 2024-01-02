@@ -5,7 +5,7 @@
   padding: 0;
   border: 0;
   width: 100%;
-  background-color: $bw-color-grade-1;
+  background-color: $ui-lightest;
   align-items: center;
   justify-content: center;
   .navbar-group {
@@ -22,7 +22,7 @@
       text-decoration: none;
     }
     .navbar-group-item {
-      color: $bw-color-grade-5;
+      color: $ui-grey;
       letter-spacing: $letter-spacing-mid;
       padding: 0.8rem 0.5rem;
       font-size: clamp(0.2rem, 0.2rem + 1vw, 1.4rem);
@@ -31,31 +31,31 @@
         width: 80%;
       }
       .nav-button {
-        border: solid 1px $bw-color-grade-4;
+        border: solid 1px $ui-grey;
         border-radius: 10rem;
         padding: 0.3rem 0.8rem;
         box-shadow: none;
       }
       .nav-button-entrar {
-        background-color: $bw-color-grade-2;
-        color: $bw-color-grade-5;
+        background-color: $ui-lightest;
+        color: $ui-darker;
       }
       .nav-button-cadastrar {
-        background-color: $bw-color-grade-3;
-        color: $bw-color-grade-1;
+        background-color: $ui-grey;
+        color: $ui-lightest;
       }
       input#nav-searchbar {
         width: 100%;
         min-width: 2rem;
         border-radius: 2rem;
-        border: solid 1px $bw-color-grade-3;
+        border: solid 1px $ui-grey;
         padding: 0.1rem 0.3rem;
       }
       #nav-searchbar::placeholder {
-        color: $bw-color-grade-3;
+        color: $ui-darkest;
       }
       #nav-searchbar::placeholder :focus {
-        color: $red-grade-1;
+        color: $red-ligh;
       }
     }
   }

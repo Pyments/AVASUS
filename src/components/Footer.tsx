@@ -5,14 +5,16 @@ function Footer() {
   return (
     <>
       <footer className="main-footer">
-        <div>
-          <span className="footer-realizacao">Realização</span>
+        <div  className="footer-realizacao">
+          <span>Realização</span>
+          <img src="/src/assets/logo-avasus-footer-v.png" alt="" />
+          <img src="/src/assets/logo-avasus-footer-v.png" alt="" />          
         </div>
-        <div>
-          <img src="" alt="Logo LAIS branca" />
+        <div className="footer-lais">
+          <div>IMG LAIS esquerda</div>
           <p>Laboratório de Inovação Tecnológica em Saúde</p>
         </div>
-        <div>
+        <div className="footer-links-uteis">
           <h2>Links Úteis</h2>
           <ul>
             <Link to="/">
@@ -32,13 +34,13 @@ function Footer() {
             </Link>
           </ul>
         </div>
-        <div>
+        <div className="footer-redes">
           <span>Redes Sociais</span>
-          <img src="" alt="LAIS Facebook" />
-          <img src="" alt="LAIS Twitter" />
-          <img src="" alt="LAIS Instagram" />
+          <div>icone facbook</div>
+          <div>icone twitter</div>
+          <div>icone instagram</div>
         </div>
-        <div>2023 @ LAIS (HUOL). Todos os direitos reservados</div>
+        <div className="footer-direitos">2023 @ LAIS (HUOL). Todos os direitos reservados</div>
       </footer>
     </>
   );
