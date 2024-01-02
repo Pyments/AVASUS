@@ -1,43 +1,58 @@
 @import "../variables";
 
 .main-footer {
+  
   width: 100%;
   color: $ui-lightest;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   .footer-realizacao {
     width: 100%;
+
     grid-area: 1 / 1 / 1 / 4;
     background-color: $red-dark;
     display: flex;
     flex-wrap: wrap;
+    padding: 1.6rem;
     span {
       width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    img {
+      max-width: 30%;
+      margin: 0 auto;
     }
   }
   .footer-lais {
     width: 100%;
     background-color: $ui-darker;
+    padding: 1.3rem;
   }
   .footer-links-uteis {
     width: 100%;
     background-color: $ui-darker;
+    padding: 1.3rem;
     ul {
       list-style: none;
       padding-left: 0px;
       a {
         text-decoration: none;
-        color: $ui-darker;
+        color: $ui-lightest;
       }
     }
   }
   .footer-redes {
     width: 100%;
     background-color: $ui-darker;
+    padding: 1.3rem;
   }
   .footer-direitos {
     width: 100%;
     grid-area: 4 / 1 / 4 / 4;
     background-color: $ui-dark;
+    color: $ui-light;
+    padding: 0.7rem;
   }
 }
