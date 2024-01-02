@@ -1,4 +1,42 @@
+@import "../variables";
+
 .main-footer {
-    display: grid;  
-    grid-template-columns: 3;
+  width: 100%;
+  color: $bw-color-grade-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .footer-realizacao {
+    width: 100%;
+    grid-area: 1 / 1 / 1 / 4;
+    background-color: $red-grade-1;
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      width: 100%;
+    }
+  }
+  .footer-lais {
+    width: 100%;
+    background-color: $bw-color-grade-4;
+  }
+  .footer-links-uteis {
+    width: 100%;
+    background-color: $bw-color-grade-4;
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        a {
+            text-decoration: none;
+            color: $bw-color-grade-4;
+      }
+    }
+  }
+  .footer-redes {
+    width: 100%;
+    background-color: $bw-color-grade-4;
+  }
+  .footer-direitos {
+    width: 100%;
+    grid-area: 4 / 1 / 4 / 4;
+    background-color: $bw-color-grade-3  }
 }
