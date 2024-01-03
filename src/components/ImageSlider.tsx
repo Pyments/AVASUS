@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { ArrowBigLeft, ArrowBigRight, CircleDot, Circle } from "lucide-react";
 import "../style/components/ImageSlider.scss";
 
-//@ts-ignore
+import ArrowLeft from "../assets/feather/arrow-left.svg";
+import ArrowRight from "../assets/feather/arrow-right.svg";
+import CircleDot from "../assets/feather/circle.svg";
+import Circle from "../assets/feather/disc.svg";
+
 import image1 from "../assets/image-slider/slide1.png";
-//@ts-ignore
 import image2 from "../assets/image-slider/slide2.png";
 
 const SLIDER = [image1, image2];
@@ -51,7 +53,7 @@ export default function ImageSlider() {
           style={{ left: 0 }}
           aria-label="Ver Imagem Anterior"
         >
-          <ArrowBigLeft />
+          <img src={ArrowLeft}/>
         </button>
         <button
           onClick={showNextImage}
@@ -59,7 +61,7 @@ export default function ImageSlider() {
           style={{ right: 0 }}
           aria-label="Ver Próxima Imagem"
         >
-          <ArrowBigRight />
+          <img src={ArrowRight} />
         </button>
         <div
           style={{
@@ -71,7 +73,6 @@ export default function ImageSlider() {
             width: "100%",
             display: "flex",
             gap: "0.25rem",
-            
           }}
         >
           {SLIDER.map((_, index) => (
@@ -81,7 +82,11 @@ export default function ImageSlider() {
               aria-label={`Ver Imagem ${index}`}
               onClick={() => setImageIndex(index)}
             >
-              {index === imageIndex ? <CircleDot /> : <Circle />}
+              {index === imageIndex ? (
+                <img src={CircleDot}/>
+              ) : (
+                <img src={Circle}/>
+              )}
             </button>
           ))}
         </div>
