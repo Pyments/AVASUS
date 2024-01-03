@@ -17,19 +17,19 @@ function Footer() {
         <div className="footer-links-uteis">
           <h2>Links Úteis</h2>
           <ul>
-            <Link to="/">
+            <Link to="/AVASUS/">
               <li className="navbar-group-item">Início</li>
             </Link>
-            <Link to="/sobre">
+            <Link to="/AVASUS/sobre">
               <li className="navbar-group-item">Sobre Nós</li>
             </Link>
-            <Link to="/cursos">
+            <Link to="/AVASUS/cursos">
               <li className="navbar-group-item">Cursos</li>
             </Link>
-            <Link to="/parceiros">
+            <Link to="/AVASUS/parceiros">
               <li className="navbar-group-item">Parceiros</li>
             </Link>
-            <Link to="/transparencia">
+            <Link to="/AVASUS/transparencia">
               <li className="navbar-group-item">Transparência</li>
             </Link>
           </ul>
