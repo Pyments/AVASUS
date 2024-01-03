@@ -5,7 +5,7 @@ import "../style/components/ImageSlider.scss";
 //@ts-ignore
 import image1 from "../assets/image-slider/slide1.png";
 //@ts-ignore
-import image2 from "../assets/image-slider/slide1.png";
+import image2 from "../assets/image-slider/slide2.png";
 
 const SLIDER = [image1, image2];
 
@@ -64,9 +64,10 @@ export default function ImageSlider() {
         <div
           style={{
             position: "absolute",
-            bottom: "0.6rem",
-            left: "-50%",
-            translate: "100%",
+            overflow: "hidden",
+            left: "50%",
+            translate: "-50%",
+            bottom: "1rem",
             display: "flex",
             gap: "0.25rem",
           }}
