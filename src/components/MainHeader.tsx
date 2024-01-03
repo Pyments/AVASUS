@@ -8,7 +8,7 @@ const MainHeader = () => {
         <ul className="navbar-group">
           <Link to="/AVASUS/">
             <li className="navbar-group-item">
-              <img src="./src/assets/logo-small.png" alt="Logo AVASUS" />
+              <img src="/AVASUS/src/assets/images/logo-small.png" alt="Logo AVASUS" />
             </li>
           </Link>
 
