@@ -83,9 +83,9 @@ export default function ImageSlider() {
               onClick={() => setImageIndex(index)}
             >
               {index === imageIndex ? (
-                <img src={CircleDot}/>
-              ) : (
                 <img src={Circle}/>
+              ) : (
+                <img src={CircleDot}/>
               )}
             </button>
           ))}
