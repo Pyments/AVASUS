@@ -6,8 +6,8 @@ import ArrowRight from "../assets/feather/arrow-right.svg";
 import CircleDot from "../assets/feather/circle.svg";
 import Circle from "../assets/feather/disc.svg";
 
-import image1 from "../assets/image-slider/slide1.png";
-import image2 from "../assets/image-slider/slide2.png";
+import image1 from "../assets/images/image-slider/slide1.png";
+import image2 from "../assets/images/image-slider/slide2.png";
 
 const SLIDER = [image1, image2];
 

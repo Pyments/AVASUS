@@ -7,8 +7,8 @@ function Footer() {
       <footer className="main-footer">
         <div  className="footer-realizacao">
           <span>Realização</span>
-          <img src="/src/assets/logo-avasus-footer-v.png" alt="" />
-          <img src="/src/assets/logo-avasus-footer-v.png" alt="" />          
+          <img src="/AVASUS/src/assets/images/logo-avasus-footer-v.png" alt="" />
+          <img src="/AVASUS/src/assets/images/logo-avasus-footer-v.png" alt="" />          
         </div>
         <div className="footer-lais">
           <div>IMG LAIS esquerda</div>
