@@ -64,12 +64,14 @@ export default function ImageSlider() {
         <div
           style={{
             position: "absolute",
-            overflow: "hidden",
             left: "50%",
-            translate: "-50%",
+            marginLeft: "auto",
+            marginRight: "auto",
             bottom: "1rem",
+            width: "100%",
             display: "flex",
             gap: "0.25rem",
+            
           }}
         >
           {SLIDER.map((_, index) => (
