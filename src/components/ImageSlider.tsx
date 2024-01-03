@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { ArrowBigLeft, ArrowBigRight, CircleDot, Circle } from "lucide-react";
 import "../style/components/ImageSlider.scss";
+
+//@ts-ignore
 import image1 from "../assets/image-slider/slide1.png";
-import image2 from "../assets/image-slider/slide2.png";
+//@ts-ignore
+import image2 from "../assets/image-slider/slide1.png";
 
 const SLIDER = [image1, image2];
 
