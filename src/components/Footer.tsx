@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "../style/components/Footer.scss";
 
-import facebookIcon from "/AVASUS/src/assets/feather/facebook.svg";
-import intagramIcon from "/AVASUS/src/assets/feather/instagram.svg";
-import twitterIcon from "/AVASUS/src/assets/feather/twitter.svg";
+import facebookIcon from "../assets/feather/facebook.svg";
+import intagramIcon from "../assets/feather/instagram.svg";
+import twitterIcon from "../assets/feather/twitter.svg";
 
 function Footer() {
   return (
