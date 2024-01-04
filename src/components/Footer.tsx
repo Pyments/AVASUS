@@ -52,10 +52,10 @@ function Footer() {
                 <img src={facebookIcon} alt="Ícone Facebook" />
               </a>
               <a href="https://twitter.com/laishuol" target="_blank">
-                <img src={twitterIcon} alt="Ícone Facebook" />
+                <img src={twitterIcon} alt="Ícone Twitter" />
               </a>
               <a href="https://www.instagram.com/laishuol/" target="_blank">
-                <img src={intagramIcon} alt="Ícone Facebook" />
+                <img src={intagramIcon} alt="Ícone Instagram" />
               </a>
             </div>
           </div>
