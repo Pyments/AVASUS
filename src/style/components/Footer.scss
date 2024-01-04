@@ -1,58 +1,68 @@
 @import "../variables";
 
+.footer-title {
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: $letter-spacing-max;
+}
+
 .main-footer {
-  
   width: 100%;
   color: $ui-lightest;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
   .footer-realizacao {
-    width: 100%;
-
-    grid-area: 1 / 1 / 1 / 4;
-    background-color: $red-dark;
     display: flex;
     flex-wrap: wrap;
-    padding: 1.6rem;
+    padding: 1.8rem;
+    background-color: $red-ligh;
     span {
+      display: block;
       width: 100%;
-      font-size: 1rem;
-      font-weight: 400;
     }
     img {
-      max-width: 30%;
-      margin: 0 auto;
+      width: 15rem;
     }
   }
-  .footer-lais {
-    width: 100%;
+  .footer-lower {
+    display: flex;
     background-color: $ui-darker;
-    padding: 1.3rem;
-  }
-  .footer-links-uteis {
-    width: 100%;
-    background-color: $ui-darker;
-    padding: 1.3rem;
-    ul {
-      list-style: none;
-      padding-left: 0px;
-      a {
-        text-decoration: none;
-        color: $ui-lightest;
+    padding: 1rem;
+    padding-top: 3rem;
+    .footer-lais {
+      p {
+        padding-top: 1.3rem;
+        width: 13rem;
+      }
+    }
+    .footer-links-uteis {
+      ul {
+        list-style: none;
+        padding: 1rem;
+        width: 12rem;
+        a {
+          text-decoration: none;
+        }
+        li {
+          text-align: left;
+          padding: 0.4rem;
+          color: $ui-lighter;
+        }
       }
     }
   }
-  .footer-redes {
-    width: 100%;
-    background-color: $ui-darker;
-    padding: 1.3rem;
-  }
   .footer-direitos {
-    width: 100%;
-    grid-area: 4 / 1 / 4 / 4;
     background-color: $ui-dark;
-    color: $ui-light;
-    padding: 0.7rem;
+    color: $ui-lighter;
+    padding: 1.2rem;
+  }
+  .footer-redes {
+    div {
+      padding-top: 1.5rem;
+      display: flex;
+      width: 8rem;
+      filter: invert(100%);
+      a {
+        padding: 0.35rem;
+      }
+    }
   }
 }
