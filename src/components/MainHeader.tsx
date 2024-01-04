@@ -1,6 +1,8 @@
 import "../style/components/MainHeader.scss";
 import { Link } from "react-router-dom";
 
+import logoSmall from "/AVASUS/src/assets/images/logo-small.png"
+
 const MainHeader = () => {
   return (
     <>
@@ -8,7 +10,7 @@ const MainHeader = () => {
         <ul className="navbar-group">
           <Link to="/AVASUS/">
             <li className="navbar-group-item">
-              <img src="/AVASUS/src/assets/images/logo-small.png" alt="Logo AVASUS" />
+              <img src={logoSmall} alt="Logo AVASUS" />
             </li>
           </Link>
 
