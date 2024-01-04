@@ -1,7 +1,7 @@
 import "../style/components/MainHeader.scss";
 import { Link } from "react-router-dom";
 
-import logoSmall from "/AVASUS/src/assets/images/logo-small.png"
+import logoSmall from "../assets/images/logo-small.png"
 
 const MainHeader = () => {
   return (
