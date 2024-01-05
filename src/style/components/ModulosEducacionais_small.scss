@@ -50,28 +50,41 @@
       }
       .modulo-matriculados {
         > img {
-          border: 2px solid black !important;
+          width: 1.8rem;
+          margin: 0;
+        }
+        span {
+          padding-left: 0.2rem;
+          margin: 0;
+          width: auto;
         }
       }
       .modulo-duracao {
         > img {
-          border: 2px solid black !important;
+          width: 1.8rem;
+          margin: 0;
         }
+        span {
+            padding-left: 0.2rem;
+            margin: 0;
+            width: auto;
+          }
       }
       .modulo-avaliacao {
         > img {
           border: 2px solid black !important;
         }
       }
-      .modulo-verModulo{
-          button{
-              all: unset;
-              background-color: $ui-light;
-              padding: 0.2rem 1rem;
-              border-radius: 1rem;
-              color: $ui-lightest;
-              text-wrap: nowrap;
-              font-weight: 800;
+      .modulo-verModulo {
+        button {
+          all: unset;
+          background-color: $ui-light;
+          padding: 0.2rem 1rem;
+          border-radius: 1rem;
+          color: $ui-lightest;
+          text-wrap: nowrap;
+          font-weight: 800;
+          cursor: pointer;
         }
       }
     }

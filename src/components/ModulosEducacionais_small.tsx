@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import "../style/components/ModulosEducacionais_small.scss";
 
+import Timer from "../assets/feather//clock.svg"
+import User from "../assets/feather/user.svg"
+
 import ApiAvasus from "../services/ApiAvasus";
 
 export default function ModulosEducacionais_small() {
@@ -36,11 +39,11 @@ export default function ModulosEducacionais_small() {
                       <span className="modulo-parceiros">{data.parceiros}</span>
                     </div>
                     <div className="modulo-matriculados">
-                      <img src="" />
-                      <span>{data.matriculados}</span>{" "}
+                      <img src={User} />
+                      <span>{data.matriculados}</span>
                     </div>
                     <div className="modulo-duracao">
-                      <img src="" />
+                      <img src={Timer} />
                       <span>{data.duracao}</span>
                     </div>
                     <div className="modulo-avaliacao">
