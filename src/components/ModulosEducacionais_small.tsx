@@ -25,7 +25,7 @@ export default function ModulosEducacionais_small() {
           <ol id="modulos-lista"></ol>
           {data?.map((data: any) => {
             return (
-              <li>
+              <li key={data.id}>
                 <img src={data.capa} />
                 {data.id}
               </li>
