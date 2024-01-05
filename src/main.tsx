@@ -11,6 +11,10 @@ import Transparencia from "./routes/Transparencia.tsx";
 import Contato from "./routes/Contato.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 
+import { ApiAvasus } from "./services/ApiAvasus.ts";
+
+ApiAvasus();
+
 const router = createBrowserRouter([
   {
     path: "/AVASUS/",
