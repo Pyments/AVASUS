@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import "../style/components/ModulosEducacionais_small.scss";
 
 import ApiAvasus from "../services/ApiAvasus";
 
@@ -22,18 +23,43 @@ export default function ModulosEducacionais_small() {
         <div>Mais populares</div>
         {/* Conteúdo paginado */}
         <div>
-          <ol id="modulos-lista"></ol>
-          {data?.map((data: any) => {
-            return (
-              <li key={data.id}>
-                <img src={data.capa} />
-                {data.id}
-              </li>
-            );
-          })}
+          <ol className="modulos-lista">
+            {data?.map((data: any) => {
+              return (
+                <li key={data.id}>
+                  <div>
+                    <div className="modulo-capa">
+                      <img src={data.capa} alt="Capa do moódulo (imagem)" />
+                    </div>
+                    <div className="modulo-cabecalho">
+                      <span className="modulo-titulo">{data.titulo}</span>
+                      <span className="modulo-parceiros">{data.parceiros}</span>
+                    </div>
+                    <div className="modulo-matriculados">
+                      <img src="" />
+                      <span>{data.matriculados}</span>{" "}
+                    </div>
+                    <div className="modulo-duracao">
+                      <img src="" />
+                      <span>{data.duracao}</span>
+                    </div>
+                    <div className="modulo-avaliacao">
+                      <img src="" />
+                      <span>{data.avaliacao}</span>
+                    </div>
+                    <div className="modulo-verModulo">
+                      <button >Ver módulo</button>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </div>
-      <span>Ver mais</span>
+      <span>
+        <button>Ver mais</button>
+      </span>
     </>
   );
 }
