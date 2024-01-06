@@ -6,7 +6,6 @@ section {
     color: $red-ligh;
   }
   div {
-    margin-top: 1rem;
     .modulos-paginas {
       width: 50%;
       margin: 0 auto;
@@ -120,6 +119,17 @@ section {
           }
         }
       }
+    }
+  }
+  div {
+    .modulo-verMais {
+      background-color: $ui-light;
+      padding: 0.6rem 3rem;
+      color: $ui-lightest;
+      border-radius: 3rem;
+      width: fit-content;
+      font-size: 1.4rem;
+      text-wrap: nowrap;
     }
   }
 }

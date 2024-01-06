@@ -3,22 +3,36 @@ import "../style/components/ModulosEducacionais_small.scss";
 
 import Timer from "../assets/feather//clock.svg";
 import User from "../assets/feather/user.svg";
-
-import ApiAvasus from "../services/ApiAvasus";
+import axios from "axios";
+//import { useState } from "react";
 
 export default function ModulosEducacionais_small() {
-  let page = "1";
-  let limit = "3";
-  let order = "desc"
-  let sort = "matriculados"
-  const { data, isLoading }: any = useQuery({
-    queryFn: () =>
-      ApiAvasus(`http://0.0.0.0:3004/cursos?_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}`),
-    queryKey: ["modulosSmall"],
-  });
+  function ApiAvasus(sort: string, order: string, page: number, limit: number) {
+    return axios
+      .get(
+        `http://0.0.0.0:3004/cursos?_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}`
+      )
+      .then((response) => response.data);
+  }
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
+  //const [modulos, setModulos] = useState(1);
+
+  const { data, isLoading, isError, error, isFetching }: any = useQuery({
+    queryKey: ["modulosSmall", "matriculados", "desc", 1, 3],
+    queryFn: () => ApiAvasus("matriculados", "desc", 1, 3),
+  });
+  if (isLoading || isFetching) {
+    return (
+      <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
+        Carregando Modulos....
+      </p>
+    );
+  } else if (isError) {
+    return (
+      <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
+        Error: {error.message}
+      </p>
+    );
   }
 
   return (
@@ -29,14 +43,31 @@ export default function ModulosEducacionais_small() {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button onClick={ApiAvasus.sort = "matriculados"
-                ApiAvasus.order = "desc"}>Mais populares</button>
+                <button
+                  onClick={() => {
+                    ApiAvasus("matriculados", "desc", 1, 3);
+                  }}
+                >
+                  Mais populares
+                </button>
               </li>
               <li>
-                <button onClick={sort = "avaliacao", order = "desc"}>Mais bem avaliados</button>
+                <button
+                  onClick={() => {
+                    ApiAvasus("avaliacao", "desc", 1, 3);
+                  }}
+                >
+                  Mais bem avaliados
+                </button>
               </li>
               <li>
-                <button onClick={sort = "criado_em", order = "desc"}>Mais recentes</button>
+                <button
+                  onClick={() => {
+                    ApiAvasus("criado_em", "desc", 1, 3);
+                  }}
+                >
+                  Mais recentes
+                </button>
               </li>
             </ul>
           </div>
@@ -74,7 +105,7 @@ export default function ModulosEducacionais_small() {
           </ol>
         </div>
         <div>
-          <button>Ver mais</button>
+          <button className="modulo-verMais">Ver mais</button>
         </div>
       </section>
     </>
