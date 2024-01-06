@@ -1,7 +1,7 @@
 @import "../variables";
 
 section {
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
   h2 {
     color: $red-ligh;
   }
@@ -123,6 +123,7 @@ section {
   }
   div {
     .modulo-verMais {
+      margin-top: 1rem;
       background-color: $ui-light;
       padding: 0.6rem 3rem;
       color: $ui-lightest;
