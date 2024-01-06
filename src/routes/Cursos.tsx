@@ -1,5 +1,15 @@
+import MainHeader from "../components/MainHeader";
+
+import Footer from "../components/Footer";
+
 const Cursos = () => {
-    return <h1>Cursos</h1>;
+  return (
+    <main>
+      <MainHeader />
+      <h1>Cursos</h1>
+      <Footer />
+    </main>
+  );
   };
   
   export default Cursos;
