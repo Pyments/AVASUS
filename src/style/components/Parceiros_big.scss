@@ -1,0 +1,40 @@
+@import "../variables";
+
+.parceiros {
+  width: 80%;
+  .parceiros-cabecalho {
+      margin-bottom: 1rem;
+      text-align: left;
+    font-size: 2rem;
+  }
+  .parceiros-resultados {
+    display: inline-block;
+    padding: 1rem 0rem;
+    text-align: left;
+    color: $ui-dark;
+    font-weight: 400;
+    width: 100%;
+  }
+  .parceiros-lista {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    margin: 1rem 0rem;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    .parceiros-item {
+      .parceiros-item-imagem {
+        height: fit-content;
+        padding: 1rem 0rem;
+        width: 15rem;
+      }
+      .parceiros-item-nome {
+        border-top: 2px solid $red-ligh;
+        padding: 1rem 0rem;
+        width: 100%;
+      }
+    }
+  }
+}

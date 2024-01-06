@@ -1,12 +1,12 @@
 import MainHeader from "../components/MainHeader";
-
+import Parceiros_big from "../components/Parceiros_big";
 import Footer from "../components/Footer";
 
 const Parceiros = () => {
   return (
     <main>
       <MainHeader />
-      <h1>Parceiros</h1>
+      <Parceiros_big />
       <Footer />
     </main>
   );
