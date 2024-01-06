@@ -1,17 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import "../style/components/ModulosEducacionais_small.scss";
 
-import Timer from "../assets/feather//clock.svg"
-import User from "../assets/feather/user.svg"
+import Timer from "../assets/feather//clock.svg";
+import User from "../assets/feather/user.svg";
 
 import ApiAvasus from "../services/ApiAvasus";
 
 export default function ModulosEducacionais_small() {
-  let page = 1;
-  let limit = 3;
+  let page = "1";
+  let limit = "3";
+  let order = "desc"
+  let sort = "matriculados"
   const { data, isLoading }: any = useQuery({
     queryFn: () =>
-      ApiAvasus(`http://0.0.0.0:3004/cursos?_page=${page}&_limit=${limit}`),
+      ApiAvasus(`http://0.0.0.0:3004/cursos?_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}`),
     queryKey: ["modulosSmall"],
   });
 
@@ -21,11 +23,23 @@ export default function ModulosEducacionais_small() {
 
   return (
     <>
-      <h2>ModulosEducacionais_small</h2>
-      <div>
-        <div>Mais populares</div>
-        {/* Conteúdo paginado */}
+      <section>
+        <h2>Modulos Educacionais</h2>
         <div>
+          <div className="modulos-paginas">
+            <ul>
+              <li>
+                <button onClick={ApiAvasus.sort = "matriculados"
+                ApiAvasus.order = "desc"}>Mais populares</button>
+              </li>
+              <li>
+                <button onClick={sort = "avaliacao", order = "desc"}>Mais bem avaliados</button>
+              </li>
+              <li>
+                <button onClick={sort = "criado_em", order = "desc"}>Mais recentes</button>
+              </li>
+            </ul>
+          </div>
           <ol className="modulos-lista">
             {data?.map((data: any) => {
               return (
@@ -51,7 +65,7 @@ export default function ModulosEducacionais_small() {
                       <span>{data.avaliacao}</span>
                     </div>
                     <div className="modulo-verModulo">
-                      <button >Ver módulo</button>
+                      <button>Ver módulo</button>
                     </div>
                   </div>
                 </li>
@@ -59,10 +73,10 @@ export default function ModulosEducacionais_small() {
             })}
           </ol>
         </div>
-      </div>
-      <span>
-        <button>Ver mais</button>
-      </span>
+        <div>
+          <button>Ver mais</button>
+        </div>
+      </section>
     </>
   );
 }
