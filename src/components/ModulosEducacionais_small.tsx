@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+// import { useEffect, useState } from "react";
 import "../style/components/ModulosEducacionais_small.scss";
 
 import Timer from "../assets/feather//clock.svg";
@@ -7,20 +8,40 @@ import axios from "axios";
 //import { useState } from "react";
 
 export default function ModulosEducacionais_small() {
-  function ApiAvasus(sort: string, order: string, page: number, limit: number) {
+  // let [sortModulosS, setSortModulosS] = useState("matriculados");
+
+  // const changeSortingToMatriculados = () => {
+  //   useEffect(() => {}, [sortModulosS]);
+  //   setSortModulosS("matriculados");
+  //   console.log(sortModulosS, setSortModulosS);
+  //   ApiAvasus(sortModulosS)
+  // };
+  // const changeSortingToAvaliacao = () => {
+  //   useEffect(() => {}, [sortModulosS]);
+  //   setSortModulosS("avaliacao");
+  //   console.log(sortModulosS, setSortModulosS);
+  //   ApiAvasus(sortModulosS)
+  // };
+  // const changeSortingToCriadoEm = () => {
+  //   useEffect(() => {}, [sortModulosS]);
+  //   setSortModulosS("criado_em");
+  //   console.log(sortModulosS, setSortModulosS);
+  //   ApiAvasus(sortModulosS)
+  // };
+
+  function ApiAvasus(sortModulosS: string) {
     return axios
       .get(
-        `http://0.0.0.0:3004/cursos?_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}`
+        `http://0.0.0.0:3004/cursos?_sort=${sortModulosS}&_order=desc&_page=1&_limit=3`
       )
       .then((response) => response.data);
   }
 
-  //const [modulos, setModulos] = useState(1);
-
   const { data, isLoading, isError, error, isFetching }: any = useQuery({
-    queryKey: ["modulosSmall", "matriculados", "desc", 1, 3],
-    queryFn: () => ApiAvasus("matriculados", "desc", 1, 3),
+    queryKey: ["modulosSmall"],
+    queryFn: () => ApiAvasus("matriculados"),
   });
+
   if (isLoading || isFetching) {
     return (
       <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
@@ -43,28 +64,22 @@ export default function ModulosEducacionais_small() {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button
-                  onClick={() => {
-                    ApiAvasus("matriculados", "desc", 1, 3);
-                  }}
+                <button 
+                // onClick={changeSortingToMatriculados}
                 >
                   Mais populares
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => {
-                    ApiAvasus("avaliacao", "desc", 1, 3);
-                  }}
+                <button 
+                // onClick={changeSortingToAvaliacao}
                 >
                   Mais bem avaliados
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => {
-                    ApiAvasus("criado_em", "desc", 1, 3);
-                  }}
+                <button 
+                // onClick={changeSortingToCriadoEm}
                 >
                   Mais recentes
                 </button>
