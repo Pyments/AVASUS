@@ -1,45 +1,25 @@
 import { useQuery } from "@tanstack/react-query";
-// import { useEffect, useState } from "react";
+import { useState } from "react";
+
 import "../style/components/ModulosEducacionais_small.scss";
 
 import Timer from "../assets/feather//clock.svg";
 import User from "../assets/feather/user.svg";
-import axios from "axios";
-//import { useState } from "react";
 
-export default function ModulosEducacionais_small() {
-  // let [sortModulosS, setSortModulosS] = useState("matriculados");
+const ModulosEducacionais_small = () => {
+  const [sort, setSort] = useState('matriculados');
 
-  // const changeSortingToMatriculados = () => {
-  //   useEffect(() => {}, [sortModulosS]);
-  //   setSortModulosS("matriculados");
-  //   console.log(sortModulosS, setSortModulosS);
-  //   ApiAvasus(sortModulosS)
-  // };
-  // const changeSortingToAvaliacao = () => {
-  //   useEffect(() => {}, [sortModulosS]);
-  //   setSortModulosS("avaliacao");
-  //   console.log(sortModulosS, setSortModulosS);
-  //   ApiAvasus(sortModulosS)
-  // };
-  // const changeSortingToCriadoEm = () => {
-  //   useEffect(() => {}, [sortModulosS]);
-  //   setSortModulosS("criado_em");
-  //   console.log(sortModulosS, setSortModulosS);
-  //   ApiAvasus(sortModulosS)
-  // };
+  const fetchModulosS = async (sort = '') => {
+    const response = await fetch(
+      `http://0.0.0.0:3004/cursos?_sort=${sort}&_order=desc&_page=1&_limit=3`
+    );
+    const data = await response.json();
+    return data;
+  };
 
-  function ApiAvasus(sortModulosS: string) {
-    return axios
-      .get(
-        `http://0.0.0.0:3004/cursos?_sort=${sortModulosS}&_order=desc&_page=1&_limit=3`
-      )
-      .then((response) => response.data);
-  }
-
-  const { data, isLoading, isError, error, isFetching }: any = useQuery({
-    queryKey: ["modulosSmall"],
-    queryFn: () => ApiAvasus("matriculados"),
+  const { isLoading, error, data, isFetching } = useQuery({
+    queryKey: ["queryModulosSmall", sort],
+    queryFn: () => fetchModulosS(sort),
   });
 
   if (isLoading || isFetching) {
@@ -48,7 +28,7 @@ export default function ModulosEducacionais_small() {
         Carregando Modulos....
       </p>
     );
-  } else if (isError) {
+  } else if (error) {
     return (
       <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
         Error: {error.message}
@@ -64,25 +44,15 @@ export default function ModulosEducacionais_small() {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button 
-                // onClick={changeSortingToMatriculados}
-                >
+                <button onClick={() => setSort('matriculados')}>
                   Mais populares
                 </button>
               </li>
               <li>
-                <button 
-                // onClick={changeSortingToAvaliacao}
-                >
-                  Mais bem avaliados
-                </button>
+                <button onClick={() => setSort('avaliacao')}>Mais bem avaliados</button>
               </li>
               <li>
-                <button 
-                // onClick={changeSortingToCriadoEm}
-                >
-                  Mais recentes
-                </button>
+                <button onClick={() => setSort('criado_em')}>Mais recentes</button>
               </li>
             </ul>
           </div>
@@ -125,4 +95,6 @@ export default function ModulosEducacionais_small() {
       </section>
     </>
   );
-}
+};
+
+export default ModulosEducacionais_small;
