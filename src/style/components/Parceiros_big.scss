@@ -3,8 +3,8 @@
 .parceiros {
   width: 80%;
   .parceiros-cabecalho {
-      margin-bottom: 1rem;
-      text-align: left;
+    margin-bottom: 1rem;
+    text-align: left;
     font-size: 2rem;
   }
   .parceiros-resultados {
@@ -13,7 +13,7 @@
     text-align: left;
     color: $ui-dark;
     font-weight: 400;
-    width: 100%;
+    width: auto;
   }
   .parceiros-lista {
     grid-template-columns: 1fr 1fr 1fr;
@@ -33,7 +33,31 @@
       .parceiros-item-nome {
         border-top: 2px solid $red-ligh;
         padding: 1rem 0rem;
-        width: 100%;
+        width: auto;
+      }
+    }
+  }
+  .parceiros-page-selector {
+    background-color: transparent;
+    display: flex;
+    width: 8rem;
+    align-items: center;
+    button {
+      margin: 1rem;
+      aspect-ratio: 1/1;
+      background-color: $ui-light;
+      color: $ui-lightest;
+      border-radius: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      transition: 200ms ease-in-out;
+      img {
+        filter: invert(360);
+      }
+      &:hover,
+      &:focus-visible {
+        background-color: $red-ligh;
       }
     }
   }
