@@ -1,12 +1,14 @@
 import MainHeader from "../components/MainHeader";
 
+import ModulosEducacionais_big from "../components/ModulosEducacionais_big";
+
 import Footer from "../components/Footer";
 
 const Cursos = () => {
   return (
     <main>
       <MainHeader />
-      <h1>Cursos</h1>
+      <ModulosEducacionais_big />
       <Footer />
     </main>
   );

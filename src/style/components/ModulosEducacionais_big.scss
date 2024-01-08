@@ -1,0 +1,75 @@
+@import "../variables";
+
+.modulosBig {
+  width: 85%;
+  h3 {
+    font-size: 2.2rem;
+    color: $red-ligh;
+    margin-bottom: 2rem;
+  }
+  .modulosBig-categorias {
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    margin: 1rem 0rem;
+    span {
+      text-wrap: nowrap;
+      font-size: 1.1rem;
+    }
+  }
+  .modulosBig-resultados {
+    display: inline-block;
+    margin-left: 0.4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .modulosBig-container {
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    display: grid;
+    padding: 0rem 0.4rem;
+    .modulosBig-items {
+      a {
+        text-decoration: none;
+        .modulosBig-items-img {
+          border-radius: 1rem;
+        }
+        .modulosBig-items-titulo {
+          text-align: justify;
+          margin: 0.2rem 0rem;
+          color: $ui-darkest;
+          font-size: 1.8rem;
+        }
+        .modulosBig-items-parceiros {
+          display: inline-block;
+          margin: 0.2rem 0rem;
+          text-align: left;
+          color: $red-ligh;
+          font-size: 1rem;
+        }
+        .modulosBig-items-estatisticas {
+          margin: 0.2rem 0rem;
+          display: inline-block;
+          text-align: justify;
+          color: $ui-darkest;
+          .modulosBig-items-matriculados {
+          }
+          .modulosBig-items-duracao {
+          }
+          .modulosBig-items-avaliacao {
+          }
+        }
+        .modulosBig-items-objetivogeral {
+          text-overflow: ellipsis;
+          color: $ui-darkest;
+          text-align: left;
+          max-height: 5rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .modulosBig-paginacao {
+    width: 7rem;
+  }
+}
