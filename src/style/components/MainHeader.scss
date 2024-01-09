@@ -1,39 +1,36 @@
 @import "../variables";
 
 .navbar {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  width: 100%;
   background-color: $ui-lightest;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  border-bottom: 2px solid $ui-lighter;
   .navbar-group {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    justify-content: center;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     text-wrap: nowrap;
     list-style: none;
+    display: flex;
     a {
       text-decoration: none;
     }
     .navbar-group-item {
-      color: $ui-grey;
+      font-size: clamp(0.2rem, 0.2rem + 1vw, 1.4rem);
       letter-spacing: $letter-spacing-mid;
       padding: 0.8rem 0.5rem;
-      font-size: clamp(0.2rem, 0.2rem + 1vw, 1.4rem);
+      color: $ui-grey;
       img {
         min-width: 5rem;
         width: 80%;
       }
       .nav-button {
         border: solid 1px $ui-grey;
-        border-radius: 10rem;
         padding: 0.3rem 0.8rem;
+        border-radius: 10rem;
         box-shadow: none;
       }
       .nav-button-entrar {
@@ -45,11 +42,10 @@
         color: $ui-lightest;
       }
       input#nav-searchbar {
-        width: 100%;
-        min-width: 2rem;
-        border-radius: 2rem;
         border: solid 1px $ui-grey;
         padding: 0.1rem 0.3rem;
+        border-radius: 2rem;
+        min-width: 2rem;
       }
       #nav-searchbar::placeholder {
         color: $ui-darkest;

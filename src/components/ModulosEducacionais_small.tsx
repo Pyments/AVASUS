@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "../style/components/ModulosEducacionais_small.scss";
 
-import Timer from "../assets/feather//clock.svg";
+import Timer from "../assets/feather/clock.svg";
 import User from "../assets/feather/user.svg";
 
 const ModulosEducacionais_small = () => {
@@ -24,13 +24,13 @@ const ModulosEducacionais_small = () => {
 
   if (isLoading || isFetching) {
     return (
-      <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
+      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
         Carregando Modulos....
       </p>
     );
   } else if (error) {
     return (
-      <p style={{ color: "white", fontSize: "30px", marginTop: "20px" }}>
+      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
         Error: {error.message}
       </p>
     );
