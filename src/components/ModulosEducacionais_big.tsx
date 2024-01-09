@@ -53,76 +53,16 @@ const ModulosEducacionais_big = () => {
       <section className="modulosBig">
         <h3>Módulos Educacionais</h3>
         <div className="modulosBig-categorias">
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Especialização");
-            }}
-          >
-            Especialização
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Módulo de extensão");
-            }}
-          >
-            Módulo de extensão
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Síflis e outras ist");
-            }}
-          >
-            Síflis e outras ist
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Covid 19");
-            }}
-          >
-            Covid 19
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Preceptoria");
-            }}
-          >
-            Preceptoria
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Doenças raras");
-            }}
-          >
-            Doenças raras
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("WebPalestras");
-            }}
-          >
-            WebPalestras
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Acessibilidade");
-            }}
-          >
-            Acessibilidade
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("Sistema prisional");
-            }}
-          >
-            Sistema prisional
-          </button>
-          <button
-            onClick={() => {
-              setModulosBigCategoria("OPAS");
-            }}
-          >
-            OPAS
-          </button>
+          <button onClick={() => {setModulosBigCategoria("Covid 19");}}>Covid 19</button>
+          <button onClick={() => {setModulosBigCategoria("Síflis e outras ist");}}>Síflis e outras ist</button>
+          <button onClick={() => {setModulosBigCategoria("Especialização");}}>Especialização</button>
+          <button onClick={() => {setModulosBigCategoria("Preceptoria");}}>Preceptoria</button>
+          <button onClick={() => {setModulosBigCategoria("Doenças raras");}}>Doenças raras</button>
+          <button onClick={() => {setModulosBigCategoria("WebPalestras");}}>WebPalestras</button>
+          <button onClick={() => {setModulosBigCategoria("Sistema prisional");}}>Sistema prisional</button>
+          <button onClick={() => {setModulosBigCategoria("OPAS");}}>OPAS</button>
+          <button onClick={() => {setModulosBigCategoria("Módulo de extensão");}}>Módulo de extensão</button>
+          <button onClick={() => {setModulosBigCategoria("Acessibilidade");}}>Acessibilidade</button>
         </div>
         {/* <span className="modulosBig-resultados">9 de {data.lenght} resultados</span> */}
         <ol className="modulosBig-container">

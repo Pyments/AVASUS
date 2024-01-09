@@ -1,13 +1,13 @@
 @import "../variables";
 
 .navbar {
+  border-bottom: 2px solid $ui-lighter;
   background-color: $ui-lightest;
   justify-content: center;
   align-items: center;
   position: sticky;
   z-index: 999;
   top: 0;
-  border-bottom: 2px solid $ui-lighter;
   .navbar-group {
     justify-content: center;
     flex-direction: row;
@@ -22,7 +22,7 @@
       font-size: clamp(0.2rem, 0.2rem + 1vw, 1.4rem);
       letter-spacing: $letter-spacing-mid;
       padding: 0.8rem 0.5rem;
-      color: $ui-grey;
+      color: $ui-dark;
       img {
         min-width: 5rem;
         width: 80%;
