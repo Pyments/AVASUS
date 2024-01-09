@@ -5,6 +5,7 @@ import "../style/components/ModulosEducacionais_small.scss";
 
 import Timer from "../assets/feather/clock.svg";
 import User from "../assets/feather/user.svg";
+import Star from "../assets/feather/star.svg";
 
 const ModulosEducacionais_small = () => {
   const [sort, setSort] = useState('matriculados');
@@ -77,7 +78,7 @@ const ModulosEducacionais_small = () => {
                       <span>{data.duracao}</span>
                     </div>
                     <div className="modulo-avaliacao">
-                      <img src="" />
+                      <img src={Star} />
                       <span>{data.avaliacao}</span>
                     </div>
                     <div className="modulo-verModulo">
