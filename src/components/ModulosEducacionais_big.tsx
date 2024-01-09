@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 
 import "../style/components/ModulosEducacionais_big.scss";
 
+import Timer from "../assets/feather/clock.svg";
+import User from "../assets/feather/user.svg";
+import Star from "../assets/feather/star.svg";
+
+
 const ModulosEducacionais_big = () => {
   const [modulosBigPage, setModulosBigPage] = useState("");
 
-  const fetchModulosB = async (sort = "") => {
+  const fetchModulosB = async (sort = "", page = "") => {
     const response = await fetch(
-      `http://0.0.0.0:3004/cursos?_sort=${sort}&_order=desc&_page=1&_limit=3`
+      `http://0.0.0.0:3004/cursos?_sort=${sort}&_page=${page}&_limit=9`
     );
     const data = await response.json();
     return data;
@@ -50,36 +55,31 @@ const ModulosEducacionais_big = () => {
         <span className="modulosBig-resultados"># de # resultados</span>
 
         <ol className="modulosBig-container">
-          <li className="modulosBig-items">
-            <Link to={"#"}>
-              <img
-                className="modulosBig-items-img"
-                style={{
-                  border: "1px solid black",
-                  minWidth: "7rem",
-                  minHeight: "7rem",
-                  backgroundColor: "lime",
-                }}
-              ></img>
-              <h2 className="modulosBig-items-titulo">titulo</h2>
-              <span className="modulosBig-items-parceiros">parceiros</span>
-              <div className="modulosBig-items-estatisticas">
-                <span className="modulosBig-items-matriculados">
-                  matriculados
+          {data?.map((data: any) => {
+            return (
+              <li className="modulosBig-items">
+                <img src={data?.capa} className="modulosBig-items-img"></img>
+                <h2 className="modulosBig-items-titulo">{data?.titulo}</h2>
+                <span className="modulosBig-items-parceiros">
+                  {data?.parceiros}
                 </span>
-                <span className="modulosBig-items-duracao">tempo</span>
-                <span className="modulosBig-items-avaliacao">avaliacao</span>
-              </div>
-              <p className="modulosBig-items-objetivogeral">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                repudiandae consequuntur quasi nesciunt, incidunt excepturi eos
-                eius error vitae ipsa provident, quaerat hic dolorem iusto alias
-                dicta eaque modi!
-              </p>
-            </Link>
-          </li>
+                <div className="modulosBig-items-estatisticas">
+                  <span className="modulosBig-items-matriculados">
+                    <img src={User} alt="Imagem matriculados" />{data?.matriculados}
+                  </span>
+                  <span className="modulosBig-items-duracao">
+                  <img src={Timer} alt="Imagem duração" />{data?.duracao}
+                  </span>
+                  <span className="modulosBig-items-avaliacao">
+                  <img src={Star} alt="Imagem avaliação" />{data?.avaliacao}
+                  </span>
+                </div>
+                <p className="modulosBig-items-objetivogeral">{data?.resumo}</p>
+                <button className="modulosBig-verModulo">Ver módulo</button>
+              </li>
+            );
+          })}
         </ol>
-
         <div className="modulosBig-paginacao">
           <button>paginação</button>
         </div>
