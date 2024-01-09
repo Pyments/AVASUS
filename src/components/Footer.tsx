@@ -4,6 +4,8 @@ import "../style/components/Footer.scss";
 import facebookIcon from "../assets/feather/facebook.svg";
 import intagramIcon from "../assets/feather/instagram.svg";
 import twitterIcon from "../assets/feather/twitter.svg";
+import logoLais from "../assets/images/logo-lais.svg"
+import logoUFRN from "../assets/images/UFRN-logo.png"
 
 function Footer() {
   return (
@@ -12,17 +14,17 @@ function Footer() {
         <div className="footer-realizacao">
           <span className="footer-title">Realização</span>
           <img
-            src="/AVASUS/src/assets/images/logo-avasus-footer-v.png"
+            src={logoLais}
             alt=""
           />
           <img
-            src="/AVASUS/src/assets/images/logo-avasus-footer-v.png"
+            src={logoUFRN}
             alt=""
           />
         </div>
         <div className="footer-lower">
           <div className="footer-lais">
-            <div>IMG LAIS esquerda</div>
+            <img src={logoLais} alt="Logo LAIS" />
             <p>Laboratório de Inovação Tecnológica em Saúde</p>
           </div>
           <div className="footer-links-uteis">
