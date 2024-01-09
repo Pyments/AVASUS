@@ -1,8 +1,6 @@
 @import "../variables";
 
-// * {border: 1px solid black;}
 .modulosBig {
-  width: 80%;
   h3 {
     margin-bottom: 2rem;
     font-size: 2.2rem;
@@ -11,11 +9,13 @@
   .modulosBig-categorias {
     flex-direction: row;
     text-align: center;
-    margin: 1rem 0rem;
+    margin: 2rem 0rem;
     display: flex;
-    span {
+    button {
+      font-size: clamp(0.1rem, 0.1rem + 1vw, 1.4rem);
+      background-color: transparent;
+      width: fit-content;
       text-wrap: nowrap;
-      font-size: 1.1rem;
     }
   }
   .modulosBig-resultados {
@@ -25,6 +25,7 @@
     text-align: left;
   }
   .modulosBig-container {
+    width: 90%;
     grid-template-columns: repeat(3, 1fr);
     padding: 0rem 0.4rem;
     list-style: none;
@@ -33,14 +34,15 @@
     .modulosBig-items {
       position: relative;
       text-decoration: none;
+      margin-bottom: 1rem;
       .modulosBig-items-img {
         border-radius: 1rem;
       }
       .modulosBig-items-titulo {
-        text-align: left;
+        font-size: clamp(0.1rem, 0.4rem + 1vw, 1.4rem);
         margin: 0.2rem 0rem;
         color: $ui-darkest;
-        font-size: 1.3rem;
+        text-align: left;
       }
       .modulosBig-items-parceiros {
         display: inline-block;
@@ -56,20 +58,20 @@
         color: $ui-darkest;
         text-wrap: nowrap;
         .modulosBig-items-matriculados {
-          img{
+          img {
             margin-right: 0.2rem;
             width: 1rem;
           }
         }
         .modulosBig-items-duracao {
-          img{
+          img {
             margin-right: 0.2rem;
             margin-left: 0.4rem;
             width: 1rem;
           }
         }
         .modulosBig-items-avaliacao {
-          img{
+          img {
             margin-left: 0.4rem;
             margin-right: 0.2rem;
             width: 1rem;
@@ -77,28 +79,50 @@
         }
       }
       .modulosBig-items-objetivogeral {
-        box-shadow: inset 0px -40px 15px 0px rgba(255,255,255,1);
         background-color: transparent;
-        text-overflow: ellipsis;
         color: $ui-darkest;
-        max-height: 4.5rem;
+        max-height: 5rem;
         text-align: left;
         overflow: hidden;
       }
     }
     .modulosBig-verModulo {
-      background-color: $ui-lighter;
-      border-radius: 3rem;
-      color: $ui-light;
-      padding: 0rem 0.2rem;
+      box-shadow: 0px -20px 10px 12px rgba(255, 255, 255, 1);
       position: absolute;
+      background-color: $ui-grey;
+      border-radius: 3rem;
+      color: $ui-lightest;
+      padding: 0.2rem 0.2rem;
       font-size: 1rem;
-      width: 7rem;
-      bottom: 0;
+      width: auto;
+      left: 0;
       right: 0;
+      bottom: -1rem;
     }
   }
   .modulosBig-paginacao {
-    width: 7rem;
+    align-items: center;  
+    margin-top: 1rem;
+    display: flex;
+    width: 6rem;
+    button {
+      background-color: $ui-light;
+      border-radius: 100%;
+      &:hover,
+      &:focus-visible {
+        background-color: $red-ligh;
+      }
+      img {
+        filter: invert(360);
+        border-radius: 100%;
+        &:hover,
+        &:focus-visible {
+          filter: invert(0);
+        }
+      }
+      span {
+        padding: 2rem 0rem;
+      }
+    }
   }
 }
