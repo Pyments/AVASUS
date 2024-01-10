@@ -1,14 +1,15 @@
 @import "../../variables";
 
 .parceirosS-section {
-  width: 100%;
   .parceirosS-titulo {
-      padding: 2rem 0rem;
-      padding-top: 0rem;
-      font-size: 2rem;
-      width: 100%;
-    }
-    .parceirosS-row {
+    padding: 2rem 0rem;
+    padding-top: 0rem;
+    font-size: 2rem;
+  }
+  .parceirosS-row {
+    -webkit-box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, 0.2);
     background-color: $ui-lighter;
     border-radius: 1rem;
     flex-direction: row;
@@ -25,9 +26,10 @@
         font-weight: 600;
       }
       .parceirosS-texto {
-          font-size: 1rem;
-          color: $ui-dark;
-          width: 90%;
+        max-width: 16rem;
+        font-size: 1rem;
+        color: $ui-dark;
+        width: 90%;
       }
     }
   }
