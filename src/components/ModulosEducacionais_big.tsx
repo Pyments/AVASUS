@@ -14,8 +14,8 @@ import Star from "../assets/feather/star.svg";
 const ModulosEducacionais_big = () => {
   // const [modulosBigCategoria, setmodulosBigCategoria] = useState("")
   const [modulosBigPage, setModulosBigPage] = useState(1);
-  const [modulosBigCategoria, setModulosBigCategoria] =
-    useState("Módulo de extensão");
+  const [modulosBigCategoria, setModulosBigCategoria] = useState("Módulo de extensão");
+  const [totalCount, setTotalCount] = useState('');
 
   const fetchModulosBig = async (
     modulosBigPage: number,
@@ -23,9 +23,12 @@ const ModulosEducacionais_big = () => {
   ) => {
     const response = await fetch(
       `http://0.0.0.0:3004/cursos?cateroria=${modulosBigCategoria}&_page=${modulosBigPage}&_limit=9`
-    );
-    const data = await response.json();
-    return data;
+      );
+      const data = await response.json();
+      const totalCountNumber: any = response.headers.get('X-Total-Count')
+      setTotalCount(totalCountNumber)
+      return data;
+      
   };
 
   const { isLoading, error, data, isFetching } = useQuery({
@@ -53,18 +56,78 @@ const ModulosEducacionais_big = () => {
       <section className="modulosBig">
         <h3>Módulos Educacionais</h3>
         <div className="modulosBig-categorias">
-          <button onClick={() => {setModulosBigCategoria("Covid 19");}}>Covid 19</button>
-          <button onClick={() => {setModulosBigCategoria("Síflis e outras ist");}}>Síflis e outras ist</button>
-          <button onClick={() => {setModulosBigCategoria("Especialização");}}>Especialização</button>
-          <button onClick={() => {setModulosBigCategoria("Preceptoria");}}>Preceptoria</button>
-          <button onClick={() => {setModulosBigCategoria("Doenças raras");}}>Doenças raras</button>
-          <button onClick={() => {setModulosBigCategoria("WebPalestras");}}>WebPalestras</button>
-          <button onClick={() => {setModulosBigCategoria("Sistema prisional");}}>Sistema prisional</button>
-          <button onClick={() => {setModulosBigCategoria("OPAS");}}>OPAS</button>
-          <button onClick={() => {setModulosBigCategoria("Módulo de extensão");}}>Módulo de extensão</button>
-          <button onClick={() => {setModulosBigCategoria("Acessibilidade");}}>Acessibilidade</button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Covid 19");
+            }}
+          >
+            Covid 19
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Síflis e outras ist");
+            }}
+          >
+            Síflis e outras ist
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Especialização");
+            }}
+          >
+            Especialização
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Preceptoria");
+            }}
+          >
+            Preceptoria
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Doenças raras");
+            }}
+          >
+            Doenças raras
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("WebPalestras");
+            }}
+          >
+            WebPalestras
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Sistema prisional");
+            }}
+          >
+            Sistema prisional
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("OPAS");
+            }}
+          >
+            OPAS
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Módulo de extensão");
+            }}
+          >
+            Módulo de extensão
+          </button>
+          <button
+            onClick={() => {
+              setModulosBigCategoria("Acessibilidade");
+            }}
+          >
+            Acessibilidade
+          </button>
         </div>
-        {/* <span className="modulosBig-resultados">9 de {data.lenght} resultados</span> */}
+        <span className="modulosBig-resultados">9 de {totalCount} resultados</span>
         <ol className="modulosBig-container">
           {data?.map((data: any) => {
             return (
