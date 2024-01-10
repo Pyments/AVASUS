@@ -1,0 +1,73 @@
+@import "../../variables";
+
+.footer-title {
+  letter-spacing: $letter-spacing-max;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.main-footer {
+  color: $ui-lightest;
+  width: 100%;
+  .footer-realizacao {
+    background-color: $red-ligh;
+    flex-wrap: wrap;
+    padding: 1.8rem;
+    display: flex;
+    span {
+      display: block;
+      width: 100%;
+    }
+    img {
+      width: 15rem;
+      filter: brightness(0) invert(1);
+    }
+  }
+  .footer-lower {
+    background-color: $ui-darker;
+    padding-top: 3rem;
+    display: flex;
+    padding: 1rem;
+    .footer-lais {
+      img{
+        filter: brightness(0) invert(1);
+        width: 12rem;
+      }
+      p {
+        padding-top: 0.5rem;
+        width: 13rem;
+      }
+    }
+    .footer-links-uteis {
+      ul {
+        list-style: none;
+        padding: 1rem;
+        width: 12rem;
+        a {
+          text-decoration: none;
+        }
+        li {
+          color: $ui-lighter;
+          text-align: left;
+          padding: 0.4rem;
+        }
+      }
+    }
+  }
+  .footer-direitos {
+    background-color: $ui-dark;
+    color: $ui-lighter;
+    padding: 1.2rem;
+  }
+  .footer-redes {
+    div {
+      filter: invert(100%);
+      padding-top: 1.5rem;
+      display: flex;
+      width: 8rem;
+      a {
+        padding: 0.35rem;
+      }
+    }
+  }
+}

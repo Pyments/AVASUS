@@ -1,0 +1,143 @@
+@import "../../variables";
+
+section {
+  padding: 2rem 0rem;
+  h2 {
+    color: $red-ligh;
+  }
+  div {
+    .modulos-paginas {
+      margin: 0 auto;
+      width: 50%;
+      ul {
+        li {
+          text-align: center;
+          display: inline;
+          button {
+            background-color: transparent;
+            transition: 200ms ease-in;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 0rem;
+            padding: 0.75rem 0;
+            color: $ui-darkest;
+            cursor: pointer;
+            width: 33%;
+            margin: 0;
+            &:hover {
+              background-color: $red-ligh;
+              border-radius: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .modulos-lista {
+      flex-direction: row;
+      list-style: none;
+      flex-wrap: wrap;
+      display: flex;
+      width: 85%;
+      li {
+        background-color: $ui-lighter;
+        padding: 1.5rem 1.5rem;
+        border-radius: 3rem;
+        margin-top: 1.5rem;
+        width: 100%;
+        div {
+          justify-content: center;
+          flex-direction: row;
+          align-items: center;
+          font-weight: 500;
+          display: flex;
+          .modulo-capa {
+            img {
+              border-radius: 1.5rem;
+              object-fit: cover;
+              height: 9rem;
+              width: 9rem;
+            }
+          }
+          .modulo-cabecalho {
+            letter-spacing: $letter-spacing-mid;
+            flex-direction: column;
+            padding-left: 0.8rem;
+            text-align: left;
+            min-width: 22rem;
+            display: flex;
+            .modulo-titulo {
+              padding-bottom: 0.2rem;
+              font-weight: bold;
+              padding: 0.4rem;
+            }
+            .modulo-parceiros {
+              letter-spacing: $letter-spacing-min;
+              font-weight: bolder;
+              font-size: 0.7rem;
+              color: $red-ligh;
+              padding: 0.4rem;
+              padding-top: 0;
+            }
+          }
+          .modulo-matriculados {
+            > img {
+              width: 1.8rem;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              width: auto;
+              margin: 0;
+            }
+          }
+          .modulo-duracao {
+            > img {
+              width: 1.8rem;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              margin: 0;
+              width: auto;
+            }
+          }
+          .modulo-avaliacao {
+            > img {
+              width: 1.8rem;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              margin: 0;
+              width: auto;
+            }
+          }
+          .modulo-verModulo {
+            button {
+              all: unset;
+              background-color: $ui-light;
+              padding: 0.3rem 1rem;
+              border-radius: 1rem;
+              color: $ui-lightest;
+              text-wrap: nowrap;
+              font-weight: 800;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  div {
+    .modulo-verMais {
+      background-color: $ui-light;
+      padding: 0.6rem 3rem;
+      color: $ui-lightest;
+      border-radius: 3rem;
+      width: fit-content;
+      font-size: 1.4rem;
+      text-wrap: nowrap;
+      margin-top: 1rem;
+    }
+  }
+}
