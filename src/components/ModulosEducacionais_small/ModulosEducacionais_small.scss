@@ -2,8 +2,11 @@
 
 section {
   padding: 2rem 0rem;
-  h2 {
+  > h2 {
+    margin-bottom: 2rem;
     color: $red-ligh;
+    font-weight: 800;
+    font-size: 2rem;
   }
   div {
     .modulos-paginas {
@@ -21,6 +24,7 @@ section {
             border-radius: 0rem;
             padding: 0.75rem 0;
             color: $ui-darkest;
+            font-size: 1.3rem;
             cursor: pointer;
             width: 33%;
             margin: 0;
@@ -45,11 +49,12 @@ section {
         margin-top: 1.5rem;
         width: 100%;
         div {
-          justify-content: center;
+          justify-content: space-around;
           flex-direction: row;
           align-items: center;
           font-weight: 500;
           display: flex;
+          width: 100%;
           .modulo-capa {
             img {
               border-radius: 1.5rem;
@@ -63,23 +68,26 @@ section {
             flex-direction: column;
             padding-left: 0.8rem;
             text-align: left;
-            min-width: 22rem;
-            display: flex;
+            min-width: 40%;
+            display: flex;;
             .modulo-titulo {
               padding-bottom: 0.2rem;
-              font-weight: bold;
+              font-size: 1.2rem;
+              font-weight: 800;
               padding: 0.4rem;
             }
             .modulo-parceiros {
               letter-spacing: $letter-spacing-min;
-              font-weight: bolder;
+              font-weight: 800;
               font-size: 0.7rem;
               color: $red-ligh;
               padding: 0.4rem;
               padding-top: 0;
+              width: 100%;
             }
           }
           .modulo-matriculados {
+            justify-content: center;
             > img {
               width: 1.8rem;
               margin: 0;
@@ -91,6 +99,7 @@ section {
             }
           }
           .modulo-duracao {
+            justify-content: center;
             > img {
               width: 1.8rem;
               margin: 0;
@@ -102,6 +111,7 @@ section {
             }
           }
           .modulo-avaliacao {
+            justify-content: center;
             > img {
               width: 1.8rem;
               margin: 0;
