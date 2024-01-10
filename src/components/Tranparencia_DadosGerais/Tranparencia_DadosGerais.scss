@@ -1,0 +1,45 @@
+@import "../../variables";
+
+.dados-gerais {
+    background-color: $ui-lighter;
+    padding: 1rem 2rem;
+    width: 90%;
+  .dados-gerais-title {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+
+  }
+  .dados-gerais-top {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  .dados-gerais-bottom {
+    display: flex;
+  }
+  .dados-gerais-container {
+    display: flex;
+    width: 80%;
+    div {
+      width: fit-content;
+      .dados-gerais-container-bottom {
+        color: $red-ligh;
+        font-weight: 1000;
+        font-size: 1.7rem;
+      }
+      .dados-gerais-container-upper {
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        img {
+          width: 1rem;
+          margin-right: 0.4rem;
+        }
+        p {
+          font-weight: 800;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
