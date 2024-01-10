@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import Home from "./routes/Home.tsx";
 import Sobre from "./routes/Sobre.tsx";
 import Cursos from "./routes/Cursos.tsx";
+import Modulo from "./routes/Modulo.tsx";
 import Parceiros from "./routes/Parceiros.tsx";
 import Transparencia from "./routes/Transparencia.tsx";
 import Contato from "./routes/Contato.tsx";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/AVASUS/cursos",
         element: <Cursos />,
+      },
+      {
+        path: "/AVASUS/cursos/:id",
+        element: <Modulo />,
       },
       {
         path: "/AVASUS/parceiros",
