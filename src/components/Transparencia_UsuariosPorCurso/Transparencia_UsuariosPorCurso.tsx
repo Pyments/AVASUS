@@ -8,7 +8,15 @@ function Transparencia_UsuariosPorCurso() {
       <h2 className="usuariosPorCurso-titulo">Usuários por curso</h2>
       <div className="usuariosPorCurso-pieChart">
         <PieChart
+          slotProps={{
+            legend: {
+              direction: 'column',
+              position: { vertical: 'bottom', horizontal: 'left' },
+              padding: 0,
+            },
+          }}
           colors={["#d2202c", "#f7313f", "#707070", "#424146"]}
+          
           series={[
             {
               
@@ -36,10 +44,19 @@ function Transparencia_UsuariosPorCurso() {
               paddingAngle: 1,
               cornerRadius: 5,
               startAngle: 0,
+              
             },
+            
+            
           ]}
-          width={1100}
-          height={400}
+          width={300}
+          height={500}
+          margin={{
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 100,
+          }}
         />
       </div>
       <div className="usuariosPorCurso-legenda"></div>

@@ -1,20 +1,21 @@
 @import "../../variables";
 
 .dados-gerais {
-    background-color: $ui-lighter;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    width: 90%;
-    box-shadow: 3px 2px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: $ui-lighter;
+  border-radius: 2rem;
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  width: 90%;
 
   .dados-gerais-title {
-    font-size: 2rem;
     margin-bottom: 1.8rem;
-
+    color: $red-dark;
+    font-size: 2rem;
   }
   .dados-gerais-top {
-    display: flex;
     margin-bottom: 1.5rem;
+    display: flex;
   }
   .dados-gerais-bottom {
     display: flex;
@@ -25,9 +26,9 @@
     div {
       width: fit-content;
       .dados-gerais-container-bottom {
-        color: $red-ligh;
         font-weight: 1000;
         font-size: 1.7rem;
+        color: $red-dark;
       }
       .dados-gerais-container-upper {
         justify-content: center;
@@ -35,12 +36,12 @@
         align-items: center;
         display: flex;
         img {
-          width: 1rem;
           margin-right: 0.4rem;
+          width: 1rem;
         }
         p {
-          font-weight: 800;
           width: fit-content;
+          font-weight: 800;
         }
       }
     }
