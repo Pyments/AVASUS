@@ -1,18 +1,18 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0 auto;
+  min-width: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
 }
 
 #root {
   font-family: Raleway, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
   max-width: 1440px;
   min-width: 980px;
   padding: 0;
   border: 0;
-  text-align: center;
-
 }

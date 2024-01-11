@@ -1,0 +1,103 @@
+@import "../../variables";
+
+.moduloDetalhe {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0;
+  .moduloDetalhe-header {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 15rem;
+    display: flex;
+    .moduloDetalhe-header-imgCapa {
+      filter: brightness(0.3);
+      position: absolute;
+      z-index: -10;
+      width: 100%;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+    .moduloDetalhe-header-tituloWrapper {
+      color: $ui-lightest;
+      width: 80%;
+      .moduloDetalhe-header-tituloWrapper-titulo {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: left;
+        margin: 0 auto;
+      }
+      .moduloDetalhe-header-tituloWrapper-parceiros {
+        display: inline-block;
+        text-align: left;
+        font-weight: 600;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+  .moduloDetalhe-mainContent {
+    background-color: $ui-lightest;
+    .moduloDetalhe-mainContent-titulo {
+      padding: 2rem 0rem;
+      color: $red-dark;
+      font-size: 2rem;
+    }
+    .moduloDetalhe-mainContent-subtitulo {
+      padding-bottom: 2rem;
+      color: $ui-darkest;
+      font-size: 1.4rem;
+    }
+    .moduloDetalhe-mainContent-texto {
+      text-align: justify;
+      color: $ui-dark;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      width: 75%;
+    }
+    .moduloDetalhe-mainContent-estatisticas {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      width: 80%;
+      .moduloDetalhe-mainContent-estatisticas-item {
+        justify-content: center;
+        display: flex;
+        .moduloDetalhe-mainContent-estatisticas-item-img {
+          max-width: 1.5rem;
+        }
+        .moduloDetalhe-mainContent-estatisticas-item-texto {
+          margin-left: 0.3rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .moduloDetalhe-mainContent-objLista {
+      list-style: disc;
+      .moduloDetalhe-mainContent-objLista-item {
+        color: $ui-dark;
+        text-align: left;
+        width: 60%;
+      }
+    }
+    .moduloDetalhe-mainContent-recursos {
+      p {
+        text-align: center;
+      }
+    }
+    .moduloDetalhe-mainContent-creditos {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+      display: grid;
+      width: 90%;
+      .moduloDetalhe-mainContent-creditos-capas {
+        max-width: 14rem;
+        justify-content: center;
+      }
+    }
+  }
+}
