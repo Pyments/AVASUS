@@ -1,12 +1,12 @@
 import MainHeader from "../../components/MainHeader/MainHeader";
-
+import ModuloDetalhe from "../../components/ModuloDetalhe/ModuloDetalhe";
 import Footer from "../../components/Footer/Footer";
 
 const Modulo = () => {
   return (
     <main>
       <MainHeader />
-      <h1>Modulo</h1>
+      <ModuloDetalhe />
       <Footer />
     </main>
   );

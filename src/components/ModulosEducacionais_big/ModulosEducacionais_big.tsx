@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 import "./ModulosEducacionais_big.scss";
 
@@ -151,7 +152,7 @@ const ModulosEducacionais_big = () => {
                   </span>
                 </div>
                 <p className="modulosBig-items-objetivogeral">{data?.resumo}</p>
-                <button className="modulosBig-verModulo">Ver módulo</button>
+                <Link to={`/AVASUS/cursos/${data?.id}`}><button className="modulosBig-verModulo">Ver módulo</button></Link>
               </li>
             );
           })}
@@ -164,7 +165,7 @@ const ModulosEducacionais_big = () => {
             <img src={ArrowLeft} />
           </button>
           <span>{modulosBigPage}</span>
-          <button
+          <button 
             onClick={() => {
               setModulosBigPage((old) => old + 1);
             }}
