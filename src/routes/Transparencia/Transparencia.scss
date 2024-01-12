@@ -1,6 +1,9 @@
 main {
-  section {
-    margin-top: 2rem;
+  .graphs {
+    display: flex;
+    margin-top: 2.5rem;
     margin-bottom: 2rem;
+    width: 90%;
+    gap: 2.5rem;
   }
 }
