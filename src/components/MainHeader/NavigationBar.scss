@@ -1,0 +1,137 @@
+@import "../../variables";
+
+// * {
+//   border: 1px solid black;
+// }
+
+
+.Navbar {
+  border-bottom: 2px solid $ui-lighter;
+  justify-content: space-between;
+  background: $ui-lightest;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  z-index: 999;
+  height: auto;
+  width: 100%;
+}
+
+.Navbar > .nav-logo {
+  color: $ui-darker;
+  font-weight: 700;
+  font-size: 21px;
+  margin: 15px;
+}
+
+.Navbar > .nav-items > a {
+  text-decoration: none;
+  position: relative;
+  border-radius: 2px;
+  color: $ui-darker;
+  font-size: 16px;
+  margin: 15px;
+  opacity: 0.9;
+}
+
+.Navbar > .nav-items > a:hover {
+  opacity: 1;
+}
+
+.Navbar > .nav-items > a::before {
+  background: $ui-darker;
+  transition: all 0.45s;
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: 0;
+  width: 0;
+  left: 0;
+}
+
+.Navbar > .nav-items > a:hover::before {
+  width: 100%;
+}
+
+.Navbar > .nav-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .Navbar > .nav-items {
+    transform: translateX(-100%);
+    backdrop-filter: blur(12px);
+    background: #ffEFEFD0;
+    flex-direction: column;
+    transition: all 0.45s;
+    position: absolute;
+    display: flex;
+    height: 100dvh;
+    width: 100%;
+    top: 70px;
+    right: 0;
+  }
+
+  .Navbar > .nav-items > a::before {
+    background: transparent;
+  }
+
+  .Navbar > .nav-items.open {
+    transform: translateX(0);
+  }
+
+  .Navbar > .nav-toggle {
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    width: 50px;
+  }
+
+  .nav-toggle > .bar {
+    transition: all 200ms ease-in-out;
+    background: $ui-darker;
+    position: relative;
+    border-radius: 2px;
+    width: 32px;
+    height: 2px;
+    right: 0;
+  }
+
+  .nav-toggle > .bar::before,
+  .nav-toggle > .bar::after {
+    transition: all 200ms ease-in-out;
+    background: $ui-darker;
+    position: absolute;
+    border-radius: 2px;
+    content: "";
+    height: 2px;
+  }
+
+  .nav-toggle > .bar::before {
+    transform: translateY(-8px);
+    width: 32px;
+    right: 0;
+  }
+
+  .nav-toggle > .bar::after {
+    transform: translateY(8px);
+    width: 32px;
+    right: 0;
+  }
+
+  .nav-toggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+  }
+
+  .nav-toggle.open > .bar::before {
+    transform: rotate(45deg) translate(26px, -26px);
+    width: 32px;
+  }
+
+  .nav-toggle.open > .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+}

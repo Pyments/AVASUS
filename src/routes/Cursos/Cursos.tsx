@@ -1,4 +1,4 @@
-import MainHeader from "../../components/MainHeader/MainHeader";
+import NavigationBar from "../../components/MainHeader/NavigationBar";
 
 import ModulosEducacionais_big from "../../components/ModulosEducacionais_big/ModulosEducacionais_big";
 
@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 const Cursos = () => {
   return (
     <main>
-      <MainHeader />
+      <NavigationBar />
       <ModulosEducacionais_big />
       <Footer />
     </main>

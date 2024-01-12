@@ -1,4 +1,4 @@
-import MainHeader from "../../components/MainHeader/MainHeader";
+import NavigationBar from "../../components/MainHeader/NavigationBar";
 import Tranparencia_DadosGerais from "../../components/Tranparencia_DadosGerais/Tranparencia_DadosGerais";
 import Transparencia_UsuariosPorCurso from "../../components/Transparencia_UsuariosPorCurso/Transparencia_UsuariosPorCurso";
 import Transparencia_UsuariosPorEstado from "../../components/Transparencia_UsuariosPorEstado/Transparencia_UsuariosPorEstado";
@@ -9,7 +9,7 @@ import "./Transparencia.scss";
 const Transparencia = () => {
   return (
     <main>
-      <MainHeader />
+      <NavigationBar />
       <Tranparencia_DadosGerais />
       <div className="graphs">
         <Transparencia_UsuariosPorCurso />

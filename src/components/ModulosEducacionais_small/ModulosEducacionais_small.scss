@@ -3,10 +3,10 @@
 section {
   padding: 2rem 0rem;
   > h2 {
+    font-size: clamp(1rem, 1rem + 1vw, 3.5rem);
     margin-bottom: 2rem;
     color: $red-ligh;
     font-weight: 800;
-    font-size: 2rem;
   }
   div {
     .modulos-paginas {
@@ -17,7 +17,7 @@ section {
           text-align: center;
           display: inline;
           button {
-            font-size: clamp(0.3rem, 0.5rem + 1vw, 1.5rem);
+            font-size: clamp(0.3rem, 0.5rem + 1vw, 1.8rem);
             font-weight: 600;
             margin: 0.5rem 0.5rem;
             padding: 0.5rem 1rem;
@@ -27,6 +27,7 @@ section {
     }
   }
   .modulos-lista {
+    margin-bottom: 2.5rem;
     flex-direction: row;
     list-style: none;
     flex-wrap: wrap;
@@ -41,17 +42,71 @@ section {
       min-width: 100%;
       div {
         justify-content: space-around;
+        transition: all 200ms linear;
         flex-direction: row;
         align-items: center;
         font-weight: 500;
         display: flex;
         width: 100%;
+        @media only screen and (max-width: 980px) {
+          flex-direction: column;
+        }
+        .modulo-estatisticas {
+          width: 125%;
+          @media only screen and (max-width: 980px) {
+            flex-direction: row;
+            margin: 1rem 0rem;
+            width: 10rem;
+          }
+          .modulo-matriculados {
+            justify-content: left;
+            font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
+            > img {
+              width: fit-content;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              width: fit-content;
+            }
+          }
+          .modulo-duracao {
+            justify-content: left;
+            font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
+            > img {
+              width: fit-content;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              width: fit-content;
+              margin: 0;
+            }
+          }
+          .modulo-avaliacao {
+            justify-content: left;
+            font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
+            > img {
+              width: fit-content;
+              margin: 0;
+            }
+            span {
+              padding-left: 0.2rem;
+              width: fit-content;
+              margin: 0;
+            }
+          }
+        }
         .modulo-capa {
           img {
             border-radius: 1.5rem;
             object-fit: cover;
             height: 9rem;
             width: 9rem;
+            @media only screen and (max-width: 980px) {
+              width: 70%;
+              height: auto;
+            }
           }
         }
         .modulo-cabecalho {
@@ -59,118 +114,100 @@ section {
           flex-direction: column;
           padding-left: 0.8rem;
           text-align: left;
+          padding: 0.4rem;
           min-width: 35%;
           display: flex;
           .modulo-titulo {
             padding-bottom: 0.2rem;
-            font-size: clamp(0.1rem, 0.35rem + 1vw, 2.2rem);
+            font-size: clamp(0.01rem, 0.35rem + 1vw, 1.7rem);
             font-weight: 800;
-            padding: 0.4rem;
+            @media only screen and (max-width: 980px) {
+              text-align: center;
+              font-size: 1.2rem;
+              margin: 1.5rem 0rem;
+            }
           }
-          .modulo-parceiros {
-            font-size: clamp(0.1rem, 0.2rem + 1vw, 2rem);
-            letter-spacing: $letter-spacing-min;
-            color: $red-ligh;
-            font-weight: 400;
-            padding: 0.4rem;
-            padding-top: 0;
+        }
+        .modulo-parceiros {
+          font-size: clamp(0.1rem, 0.2rem + 1vw, 1.6rem);
+          letter-spacing: $letter-spacing-min;
+          color: $red-ligh;
+          font-weight: 600;
+          padding: 0.4rem;
+          padding-top: 0;
+          width: 100%;
+          @media only screen and (max-width: 980px) {
+            font-size: clamp(0.1rem, 0.5rem + 1vw, 1.5rem);
+            text-align: center;
+            margin-top: -1rem;
+            font-weight: 800;
+          }
+        }
+      }
+      .modulo-verModulo {
+        justify-content: center;
+        a {
+          justify-content: center;
+          text-decoration: none;
+          color: $ui-lightest;
+          &:hover > button,
+          &:focus-visible > button {
+            background-color: $ui-lightest;
+            border: 3px solid $ui-light;
+            color: $ui-darkest;
+          }
+          @media only screen and (max-width: 980px) {
             width: 100%;
           }
-        }
-        .modulo-matriculados {
-          justify-content: left;
-          font-size: clamp(0.1rem, 0.2rem + 1vw, 1rem);
-          > img {
-            width: fit-content;
-            margin: 0;
-          }
-          span {
-            padding-left: 0.2rem;
-            width: fit-content;
-            margin: 0;
-          }
-        }
-        .modulo-duracao {
-          justify-content: left;
-          font-size: clamp(0.1rem, 0.2rem + 1vw, 1rem);
-          > img {
-            width: fit-content;
-            margin: 0;
-          }
-          span {
-            padding-left: 0.2rem;
-            width: fit-content;
-            margin: 0;
-          }
-        }
-        .modulo-avaliacao {
-          justify-content: left;
-          font-size: clamp(0.1rem, 0.2rem + 1vw, 1rem);
-          > img {
-            width: fit-content;
-            margin: 0;
-          }
-          span {
-            padding-left: 0.2rem;
-            width: fit-content;
-            margin: 0;
-          }
-        }
-        .modulo-verModulo {
-          justify-content: center;
-          a {
-            justify-content: center;
-            text-decoration: none;
+          button {
+            all: unset;
+            font-size: clamp(0.1rem, 0.2rem + 1vw, 1.5rem);
+            border: 3px solid transparent;
+            background-color: $ui-light;
+            transition: all 200ms;
+            padding: 0.3rem 1rem;
+            align-items: center;
+            border-radius: 2rem;
             color: $ui-lightest;
-            &:hover,
-            &:focus-visible > button {
-              background-color: $ui-lightest;
-              border: 3px solid $ui-light;
-              color: $ui-darkest;
-            }
-            button {
-              all: unset;
-              font-size: clamp(0.1rem, 0.2rem + 1vw, 1.5rem);
-              border: 3px solid transparent;
-              background-color: $ui-light;
-              transition: all 200ms;
-              padding: 0.3rem 1rem;
-              align-items: center;
-              border-radius: 2rem;
-              color: $ui-lightest;
-              object-fit: contain;
-              text-wrap: nowrap;
-              font-weight: 800;
-              cursor: pointer;
-              width: 80%;
+            object-fit: contain;
+            text-wrap: nowrap;
+            font-weight: 800;
+            cursor: pointer;
+            width: 80%;
+            @media only screen and (max-width: 980px) {
+              padding: 0.5rem 0rem;
+              font-size: clamp(0.6rem, 0.7rem + 1vw, 2rem);
             }
           }
         }
       }
     }
   }
-}
-div {
-  a {
-    &:hover,
-    &:focus-visible > .modulo-verMais {
-      background-color: $ui-lightest;
-      border: 3px solid $ui-light;
-      color: $ui-darkest;
-    }
-    .modulo-verMais {
-      border: 3px solid transparent;
-      background-color: $ui-light;
-      transition: all 200ms;
-      padding: 0.4rem 2.5rem;
-      color: $ui-lightest;
-      border-radius: 3rem;
-      width: fit-content;
-      font-size: 1.2rem;
-      text-wrap: nowrap;
-      margin-top: 1rem;
-      font-weight: 600;
-      cursor: pointer;
+  div {
+    a {
+      &:hover > .modulo-verMais,
+      &:focus-visible > .modulo-verMais {
+        background-color: $ui-lightest;
+        border: 3px solid $ui-light;
+        color: $ui-darkest;
+      }
+      .modulo-verMais {
+        font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
+        border: 3px solid transparent;
+        background-color: $ui-light;
+        transition: all 200ms;
+        padding: 0.4rem 2.5rem;
+        color: $ui-lightest;
+        border-radius: 3rem;
+        width: fit-content;
+        text-wrap: nowrap;
+        margin-top: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        @media only screen and (max-width: 980px) {
+          font-size: clamp(0.9rem, 0.4rem + 1vw, 2rem);
+        }
+      }
     }
   }
 }
