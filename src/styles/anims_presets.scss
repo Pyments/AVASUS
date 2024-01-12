@@ -38,7 +38,8 @@
     top: 0;
   }
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &:focus {
     color: $ui-lightest;
   }
   &:hover:after,
@@ -49,7 +50,9 @@
   &:hover:before,
   &:hover:after,
   &:focus-visible:after,
-  &:focus-visible:before {
+  &:focus-visible:before,
+  &:focus:before,
+  &:focus:after {
     transform: scale(1);
     border-radius: 0;
   }
