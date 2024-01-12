@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
 import "./ModulosEducacionais_small.scss";
+import "../../styles/anims_presets.scss";
 
 import Timer from "../../assets/feather/clock.svg";
 import User from "../../assets/feather/user.svg";
@@ -46,17 +47,17 @@ const ModulosEducacionais_small = () => {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button onClick={() => setSort("matriculados")}>
+                <button className="button-growBox" onClick={() => setSort("matriculados")}>
                   Mais populares
                 </button>
               </li>
               <li>
-                <button onClick={() => setSort("avaliacao")}>
+                <button className="button-growBox" onClick={() => setSort("avaliacao")}>
                   Mais bem avaliados
                 </button>
               </li>
               <li>
-                <button onClick={() => setSort("criado_em")}>
+                <button className="button-growBox" onClick={() => setSort("criado_em")}>
                   Mais recentes
                 </button>
               </li>
@@ -88,7 +89,7 @@ const ModulosEducacionais_small = () => {
                     </div>
                     <div className="modulo-verModulo">
                       <Link to={`/AVASUS/cursos/${data?.id}`}>
-                        <button>Ver módulo</button>
+                        <button tabIndex={-1}>Ver módulo</button>
                       </Link>
                     </div>
                   </div>
@@ -99,7 +100,7 @@ const ModulosEducacionais_small = () => {
         </div>
         <div>
           <Link to={`/AVASUS/cursos`}>
-            <button className="modulo-verMais">Ver mais</button>
+            <button tabIndex={-1} className="modulo-verMais">Ver mais</button>
           </Link>
         </div>
       </section>

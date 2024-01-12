@@ -1,0 +1,55 @@
+@import "../variables";
+
+.button-growBox {
+  all: unset;
+  border-bottom: 4px solid $ui-lighter;
+  transform-style: preserve-3d;
+  background: transparent;
+  transition: all 250ms;
+  text-decoration: none;
+  color: $ui-darkest;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 2;
+  outline: none;
+  border: none;
+  &:before {
+    transform: translate3D(0, 0, 0);
+    background: $red-ligh;
+    z-index: -2;
+  }
+  &:before,
+  &:after {
+    transform: translate3D(0, -100%, 0);
+    transform-origin: center center;
+    transform: scale(1, 0);
+    transition: all 250ms;
+    background: $red-ligh;
+    background: $ui-dark;
+    position: absolute;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+  &:hover,
+  &:focus-visible {
+    color: $ui-lightest;
+  }
+  &:hover:after,
+  &:focus-visible:after {
+    transform: translate3D(0, 0, 0);
+    transition: all 250ms;
+  }
+  &:hover:before,
+  &:hover:after ,
+  &:focus-visible:after,
+  &:focus-visible:before{
+    transform: scale(1);
+    border-radius: 0;
+  }
+}
