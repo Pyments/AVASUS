@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
-import "./ModulosEducacionais_small.scss";
-import "../../styles/anims_presets.scss";
-
 import Timer from "../../assets/feather/clock.svg";
 import User from "../../assets/feather/user.svg";
 import Star from "../../assets/feather/star.svg";
 import { Link } from "react-router-dom";
+
+import "./ModulosEducacionais_small.scss";
+import "../../styles/anims_presets.scss";
 
 const ModulosEducacionais_small = () => {
   const [sort, setSort] = useState("matriculados");
@@ -20,25 +20,62 @@ const ModulosEducacionais_small = () => {
     return data;
   };
 
-  const { isLoading, error, data, isFetching } = useQuery({
+  const { isLoading, data, isFetching, error } = useQuery({
     queryKey: ["queryModulosSmall", sort],
     queryFn: () => fetchModulosS(sort),
   });
 
-  if (isLoading || isFetching) {
+  if (isLoading || isFetching || error) {
     return (
-      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
-        Carregando Modulos....
-      </p>
-    );
-  } else if (error) {
-    return (
-      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
-        Error: {error.message}
-      </p>
+      <>
+        <section>
+          <h2>Modulos Educacionais</h2>
+          <div>
+            <div className="modulos-paginas">
+              <ul>
+                <li>
+                  <button
+                    className="button-growBox"
+                    onClick={() => setSort("matriculados")}
+                  >
+                    Mais populares
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="button-growBox"
+                    onClick={() => setSort("avaliacao")}
+                  >
+                    Mais bem avaliados
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="button-growBox"
+                    onClick={() => setSort("criado_em")}
+                  >
+                    Mais recentes
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <ol className="modulos-lista">
+              <p>
+                <span className="loaderDots"></span>
+              </p>
+            </ol>
+          </div>
+          <div>
+            <Link to={`/AVASUS/cursos`}>
+              <button tabIndex={-1} className="modulo-verMais">
+                Ver mais
+              </button>
+            </Link>
+          </div>
+        </section>
+      </>
     );
   }
-
   return (
     <>
       <section>
@@ -47,17 +84,26 @@ const ModulosEducacionais_small = () => {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button className="button-growBox" onClick={() => setSort("matriculados")}>
+                <button
+                  className="button-growBox"
+                  onClick={() => setSort("matriculados")}
+                >
                   Mais populares
                 </button>
               </li>
               <li>
-                <button className="button-growBox" onClick={() => setSort("avaliacao")}>
+                <button
+                  className="button-growBox"
+                  onClick={() => setSort("avaliacao")}
+                >
                   Mais bem avaliados
                 </button>
               </li>
               <li>
-                <button className="button-growBox" onClick={() => setSort("criado_em")}>
+                <button
+                  className="button-growBox"
+                  onClick={() => setSort("criado_em")}
+                >
                   Mais recentes
                 </button>
               </li>
@@ -75,17 +121,19 @@ const ModulosEducacionais_small = () => {
                       <span className="modulo-titulo">{data.titulo}</span>
                       <span className="modulo-parceiros">{data.parceiros}</span>
                     </div>
-                    <div className="modulo-matriculados">
-                      <img src={User} />
-                      <span>{data.matriculados}</span>
-                    </div>
-                    <div className="modulo-duracao">
-                      <img src={Timer} />
-                      <span>{data.duracao}</span>
-                    </div>
-                    <div className="modulo-avaliacao">
-                      <img src={Star} />
-                      <span>{data.avaliacao}</span>
+                    <div className="modulo-estatisticas">
+                      <div className="modulo-matriculados">
+                        <img src={User} />
+                        <span>{data.matriculados}</span>
+                      </div>
+                      <div className="modulo-duracao">
+                        <img src={Timer} />
+                        <span>{data.duracao}</span>
+                      </div>
+                      <div className="modulo-avaliacao">
+                        <img src={Star} />
+                        <span>{data.avaliacao}</span>
+                      </div>
                     </div>
                     <div className="modulo-verModulo">
                       <Link to={`/AVASUS/cursos/${data?.id}`}>
@@ -100,7 +148,9 @@ const ModulosEducacionais_small = () => {
         </div>
         <div>
           <Link to={`/AVASUS/cursos`}>
-            <button tabIndex={-1} className="modulo-verMais">Ver mais</button>
+            <button tabIndex={-1} className="modulo-verMais">
+              Ver mais
+            </button>
           </Link>
         </div>
       </section>
