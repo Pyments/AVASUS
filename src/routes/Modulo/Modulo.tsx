@@ -1,11 +1,11 @@
-import MainHeader from "../../components/MainHeader/MainHeader";
+import NavigationBar from "../../components/MainHeader/NavigationBar";
 import ModuloDetalhe from "../../components/ModuloDetalhe/ModuloDetalhe";
 import Footer from "../../components/Footer/Footer";
 
 const Modulo = () => {
   return (
     <main>
-      <MainHeader />
+      <NavigationBar />
       <ModuloDetalhe />
       <Footer />
     </main>
