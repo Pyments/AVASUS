@@ -6,11 +6,12 @@ import "./ModulosEducacionais_small.scss";
 import Timer from "../../assets/feather/clock.svg";
 import User from "../../assets/feather/user.svg";
 import Star from "../../assets/feather/star.svg";
+import { Link } from "react-router-dom";
 
 const ModulosEducacionais_small = () => {
-  const [sort, setSort] = useState('matriculados');
+  const [sort, setSort] = useState("matriculados");
 
-  const fetchModulosS = async (sort = '') => {
+  const fetchModulosS = async (sort = "") => {
     const response = await fetch(
       `http://0.0.0.0:3004/cursos?_sort=${sort}&_order=desc&_page=1&_limit=3`
     );
@@ -45,15 +46,19 @@ const ModulosEducacionais_small = () => {
           <div className="modulos-paginas">
             <ul>
               <li>
-                <button onClick={() => setSort('matriculados')}>
+                <button onClick={() => setSort("matriculados")}>
                   Mais populares
                 </button>
               </li>
               <li>
-                <button onClick={() => setSort('avaliacao')}>Mais bem avaliados</button>
+                <button onClick={() => setSort("avaliacao")}>
+                  Mais bem avaliados
+                </button>
               </li>
               <li>
-                <button onClick={() => setSort('criado_em')}>Mais recentes</button>
+                <button onClick={() => setSort("criado_em")}>
+                  Mais recentes
+                </button>
               </li>
             </ul>
           </div>
@@ -82,7 +87,9 @@ const ModulosEducacionais_small = () => {
                       <span>{data.avaliacao}</span>
                     </div>
                     <div className="modulo-verModulo">
-                      <button>Ver módulo</button>
+                      <Link to={`/AVASUS/cursos/${data?.id}`}>
+                        <button>Ver módulo</button>
+                      </Link>
                     </div>
                   </div>
                 </li>
@@ -91,7 +98,9 @@ const ModulosEducacionais_small = () => {
           </ol>
         </div>
         <div>
-          <button className="modulo-verMais">Ver mais</button>
+          <Link to={`/AVASUS/cursos`}>
+            <button className="modulo-verMais">Ver mais</button>
+          </Link>
         </div>
       </section>
     </>
