@@ -20,6 +20,9 @@ const NavigationBar = () => {
             <Link to="/AVASUS/parceiros">Parceiros</Link>
             <Link to="/AVASUS/transparencia">Transparência</Link>
             <Link to="/AVASUS/contato">Contato</Link>
+            <input className="nav-items-pesquisar" type="text" name="Pesquisar" placeholder="Pesquisar"/>
+            <button className="nav-items-button button-growBox" type="button">Entrar</button>
+            <button className="nav-items-button button-growBox" type="button">Cadastrar</button>
           </div>
           <div
             className={`nav-toggle ${isOpen && "open"}`}
