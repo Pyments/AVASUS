@@ -112,6 +112,11 @@ nav {
             border-radius: 2rem;
           }
         }
+        .nav-items-pesquisar {
+          border: 2px solid $ui-darkest;
+          text-align: center;
+          margin: 0 auto;
+        }
       }
       .nav-items.open {
         transform: translateX(0);
