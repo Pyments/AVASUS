@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 
-
 import "./ModulosEducacionais_big.scss";
+import "../../styles/anims_presets.scss";
 
 import ArrowLeft from "../../assets/feather/arrow-left.svg";
 import ArrowRight from "../../assets/feather/arrow-right.svg";
@@ -12,10 +12,10 @@ import Star from "../../assets/feather/star.svg";
 import User from "../../assets/feather/user.svg";
 
 const ModulosEducacionais_big = () => {
-  // const [modulosBigCategoria, setmodulosBigCategoria] = useState("")
   const [modulosBigPage, setModulosBigPage] = useState(1);
-  const [modulosBigCategoria, setModulosBigCategoria] = useState("Módulo de extensão");
-  const [totalCount, setTotalCount] = useState('');
+  const [modulosBigCategoria, setModulosBigCategoria] =
+    useState("Módulo de extensão");
+  const [totalCount, setTotalCount] = useState("");
 
   const fetchModulosBig = async (
     modulosBigPage: number,
@@ -23,33 +23,18 @@ const ModulosEducacionais_big = () => {
   ) => {
     const response = await fetch(
       `http://0.0.0.0:3004/cursos?cateroria=${modulosBigCategoria}&_page=${modulosBigPage}&_limit=9`
-      );
-      const data = await response.json();
-      const totalCountNumber: any = response.headers.get('X-Total-Count')
-      setTotalCount(totalCountNumber)
-      return data;
-      
+    );
+    const data = await response.json();
+    const totalCountNumber: any = response.headers.get("X-Total-Count");
+    setTotalCount(totalCountNumber);
+    return data;
   };
 
-  const { isLoading, error, data, isFetching } = useQuery({
+  const { data } = useQuery({
     queryKey: ["queryModulosBig", modulosBigPage, modulosBigCategoria],
     queryFn: () => fetchModulosBig(modulosBigPage, modulosBigCategoria),
     placeholderData: keepPreviousData,
   });
-
-  if (isLoading || isFetching) {
-    return (
-      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
-        Carregando Modulos....
-      </p>
-    );
-  } else if (error) {
-    return (
-      <p style={{ color: "#000000", fontSize: "30px", marginTop: "20px" }}>
-        Error: {error.message}
-      </p>
-    );
-  }
 
   return (
     <>
@@ -57,6 +42,7 @@ const ModulosEducacionais_big = () => {
         <h3>Módulos Educacionais</h3>
         <div className="modulosBig-categorias">
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Covid 19");
             }}
@@ -64,6 +50,7 @@ const ModulosEducacionais_big = () => {
             Covid 19
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Síflis e outras ist");
             }}
@@ -71,6 +58,7 @@ const ModulosEducacionais_big = () => {
             Síflis e outras ist
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Especialização");
             }}
@@ -78,6 +66,7 @@ const ModulosEducacionais_big = () => {
             Especialização
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Preceptoria");
             }}
@@ -85,6 +74,7 @@ const ModulosEducacionais_big = () => {
             Preceptoria
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Doenças raras");
             }}
@@ -92,6 +82,7 @@ const ModulosEducacionais_big = () => {
             Doenças raras
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("WebPalestras");
             }}
@@ -99,6 +90,7 @@ const ModulosEducacionais_big = () => {
             WebPalestras
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Sistema prisional");
             }}
@@ -106,6 +98,7 @@ const ModulosEducacionais_big = () => {
             Sistema prisional
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("OPAS");
             }}
@@ -113,6 +106,7 @@ const ModulosEducacionais_big = () => {
             OPAS
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Módulo de extensão");
             }}
@@ -120,6 +114,7 @@ const ModulosEducacionais_big = () => {
             Módulo de extensão
           </button>
           <button
+            className="button-growBox"
             onClick={() => {
               setModulosBigCategoria("Acessibilidade");
             }}
@@ -127,7 +122,9 @@ const ModulosEducacionais_big = () => {
             Acessibilidade
           </button>
         </div>
-        <span className="modulosBig-resultados">9 de {totalCount} resultados</span>
+        <span className="modulosBig-resultados">
+          9 de {totalCount} resultados
+        </span>
         <ol className="modulosBig-container">
           {data?.map((data: any) => {
             return (
@@ -152,20 +149,24 @@ const ModulosEducacionais_big = () => {
                   </span>
                 </div>
                 <p className="modulosBig-items-objetivogeral">{data?.resumo}</p>
-                <Link to={`/AVASUS/cursos/${data?.id}`}><button className="modulosBig-verModulo">Ver módulo</button></Link>
+                <Link tabIndex={-1} to={`/AVASUS/cursos/${data?.id}`}>
+                  <button className="modulosBig-verModulo">Ver módulo</button>
+                </Link>
               </li>
             );
           })}
         </ol>
         <div className="modulosBig-paginacao">
           <button
+            tabIndex={1}
             onClick={() => setModulosBigPage((old) => Math.max(old - 1, 1))}
             disabled={modulosBigPage === 1}
           >
             <img src={ArrowLeft} />
           </button>
           <span>{modulosBigPage}</span>
-          <button 
+          <button
+            tabIndex={1}
             onClick={() => {
               setModulosBigPage((old) => old + 1);
             }}
