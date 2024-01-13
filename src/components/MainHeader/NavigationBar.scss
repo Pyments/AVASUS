@@ -1,20 +1,23 @@
 @import "../../variables";
 
-// * {
-//   border: 1px solid black;
-// }
-
+nav {
+  & {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+  }
+}
 
 .Navbar {
   border-bottom: 2px solid $ui-lighter;
   justify-content: space-between;
   background: $ui-lightest;
   align-items: center;
-  position: fixed;
   display: flex;
   z-index: 999;
   height: auto;
   width: 100%;
+  top: 0;
 }
 
 .Navbar > .nav-logo {
@@ -57,11 +60,11 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   .Navbar > .nav-items {
     transform: translateX(-100%);
     backdrop-filter: blur(12px);
-    background: #ffEFEFD0;
+    background: #efefefd0;
     flex-direction: column;
     transition: all 0.45s;
     position: absolute;
@@ -87,6 +90,7 @@
     display: flex;
     height: 50px;
     width: 50px;
+    margin-right: 10px;
   }
 
   .nav-toggle > .bar {

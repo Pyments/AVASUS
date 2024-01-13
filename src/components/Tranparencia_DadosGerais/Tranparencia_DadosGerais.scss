@@ -10,12 +10,17 @@
 
   .dados-gerais-title {
     margin-bottom: 1.8rem;
-    color: $red-dark;
+    color: $red-ligh;
     font-size: 2rem;
   }
   .dados-gerais-top {
     margin-bottom: 1.5rem;
     display: flex;
+    @media only screen and (max-width: 980px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
   .dados-gerais-bottom {
     display: flex;
@@ -28,16 +33,23 @@
       .dados-gerais-container-bottom {
         font-weight: 1000;
         font-size: 1.7rem;
-        color: $red-dark;
+        color: $red-ligh;
       }
       .dados-gerais-container-upper {
         justify-content: center;
         flex-direction: row;
         align-items: center;
         display: flex;
+        @media only screen and (max-width: 701px) {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
         img {
           margin-right: 0.4rem;
           width: 1rem;
+          @media only screen and (max-width: 701px) {
+            margin: 0 auto;
+          }
         }
         p {
           width: fit-content;

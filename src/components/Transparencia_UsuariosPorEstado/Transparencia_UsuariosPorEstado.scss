@@ -5,6 +5,9 @@
   background-color: $ui-lighter;
   border-radius: 2rem;
   min-width: 50%;
+  @media only screen and (max-width: 980px) {
+    width: 100%;
+  }
   .usuariosPorEstado-titulo {
     width: auto;
   }
