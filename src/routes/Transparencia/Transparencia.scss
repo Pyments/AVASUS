@@ -5,5 +5,8 @@ main {
     margin-bottom: 2rem;
     width: 90%;
     gap: 2.5rem;
+    @media only screen and (max-width: 980px) {
+      flex-direction: column;
+    }
   }
 }

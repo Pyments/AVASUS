@@ -5,11 +5,14 @@
   background-color: $ui-lighter;
   border-radius: 2rem;
   min-width: 50%;
+  @media only screen and (max-width: 980px) {
+    width: 100%;
+  }
   .usuariosPorCurso-titulo {
     margin-bottom: 2rem;
     font-weight: 800;
     font-size: 2rem;
-    color: $red-dark;
+    color: $red-ligh;
   }
   .usuariosPorCurso-pieChart {
     width: fit-content;
