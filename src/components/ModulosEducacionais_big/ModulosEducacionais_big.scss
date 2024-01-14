@@ -25,7 +25,7 @@
       font-weight: 800;
       margin-bottom: 1rem;
       display: grid;
-      width: 50%;
+      width: 80%;
     }
     button {
       font-size: clamp(0.1rem, 0.2rem + 1vw, 1.4rem);
@@ -37,13 +37,15 @@
       margin: 0 auto;
       height: 2rem;
       @media only screen and (max-width: 700px) {
-        width: 100%;
         text-align: center;
-        font-size: 0.6rem;
+        font-size: clamp(0.1rem, 0.4rem + 1vw, 1.4rem);
+        width: 100%;
         padding: 0;
+        margin: 0 auto;
       }
       &:before,
       &:after {
+        transition: all 100ms ease-in-out;
         background: $ui-dark;
       }
     }
@@ -92,6 +94,10 @@
         text-align: left;
         color: $red-ligh;
         font-size: 1rem;
+        width: 100%;
+        @media only screen and (max-width: 980px) {
+          text-align: center;
+        }
       }
       .modulosBig-items-estatisticas {
         width: 100%;

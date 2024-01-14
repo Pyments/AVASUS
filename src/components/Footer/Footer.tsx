@@ -33,7 +33,7 @@ function Footer() {
               <Link to="/AVASUS/">
                 <li className="navbar-group-item">Início</li>
               </Link>
-              <Link to="/AVASUS/sobre">
+              <Link to="#">
                 <li className="navbar-group-item">Sobre Nós</li>
               </Link>
               <Link to="/AVASUS/cursos">

@@ -1,141 +1,182 @@
 @import "../../variables";
 
 nav {
-  & {
-    position: sticky;
-    z-index: 999;
-    top: 0;
-  }
-}
-
-.Navbar {
-  border-bottom: 2px solid $ui-lighter;
-  justify-content: space-between;
-  background: $ui-lightest;
-  align-items: center;
-  display: flex;
+  position: sticky;
   z-index: 999;
-  height: auto;
   width: 100%;
   top: 0;
-}
-
-.Navbar > .nav-logo {
-  color: $ui-darker;
-  font-weight: 700;
-  font-size: 21px;
-  margin: 15px;
-}
-
-.Navbar > .nav-items > a {
-  text-decoration: none;
-  position: relative;
-  border-radius: 2px;
-  color: $ui-darker;
-  font-size: 16px;
-  margin: 15px;
-  opacity: 0.9;
-}
-
-.Navbar > .nav-items > a:hover {
-  opacity: 1;
-}
-
-.Navbar > .nav-items > a::before {
-  background: $ui-darker;
-  transition: all 0.45s;
-  position: absolute;
-  content: "";
-  height: 2px;
-  bottom: 0;
-  width: 0;
-  left: 0;
-}
-
-.Navbar > .nav-items > a:hover::before {
-  width: 100%;
-}
-
-.Navbar > .nav-toggle {
-  display: none;
-}
-
-@media only screen and (max-width: 700px) {
-  .Navbar > .nav-items {
-    transform: translateX(-100%);
-    backdrop-filter: blur(12px);
-    background: #efefefd0;
-    flex-direction: column;
-    transition: all 0.45s;
-    position: absolute;
-    display: flex;
-    height: 100dvh;
-    width: 100%;
-    top: 70px;
-    right: 0;
-  }
-
-  .Navbar > .nav-items > a::before {
-    background: transparent;
-  }
-
-  .Navbar > .nav-items.open {
-    transform: translateX(0);
-  }
-
-  .Navbar > .nav-toggle {
-    justify-content: center;
+  .Navbar {
+    font-size: clamp(0.1rem, 0.2rem + 1vw, 1.5rem);
+    border-bottom: 2px solid $ui-lighter;
+    justify-content: space-between;
+    background: $ui-lightest;
     align-items: center;
-    cursor: pointer;
     display: flex;
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    .nav-logo {
+      color: $ui-darker;
+      margin: 15px;
+    }
+    .nav-items {
+      margin-right: 1rem;
+      a {
+        text-decoration: none;
+        position: relative;
+        color: $ui-darker;
+        margin: 15px;
+        &::before {
+          background: $ui-light;
+          transition: all 250ms ease;
+          position: absolute;
+          content: "";
+          height: 3px;
+          bottom: -3px;
+          width: 0;
+          left: 0;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+      .nav-items-button {
+        font-size: clamp(0.1rem, 0.1rem + 1vw, 1rem);
+        background-color: $ui-lighter;
+        border-radius: 2rem;
+        padding: 0 0.8rem;
+        font-weight: 400;
+        height: 100%;
+        &:before,
+        &:after {
+          background: $ui-dark;
+          border-radius: 2rem;
+        }
+      }
+      .nav-items-pesquisar {
+        all: unset;
+        border: 2px solid $ui-light;
+        transition: all 250ms ease;
+        margin-right: 0.3rem;
+        border-radius: 2rem;
+        text-indent: 0.5rem;
+        width: fit-content;
+        text-align: left;
+        font-weight: 400;
+        max-width: 20rem;
+        height: 1.5rem;
+        &:hover,
+        &:focus-visible,
+        &:focus {
+          border: 2px solid $ui-darkest;
+          color: $ui-darkest;
+        }
+      }
+    }
+    .nav-toggle {
+      display: none;
+    }
   }
-
-  .nav-toggle > .bar {
-    transition: all 200ms ease-in-out;
-    background: $ui-darker;
-    position: relative;
-    border-radius: 2px;
-    width: 32px;
-    height: 2px;
-    right: 0;
-  }
-
-  .nav-toggle > .bar::before,
-  .nav-toggle > .bar::after {
-    transition: all 200ms ease-in-out;
-    background: $ui-darker;
-    position: absolute;
-    border-radius: 2px;
-    content: "";
-    height: 2px;
-  }
-
-  .nav-toggle > .bar::before {
-    transform: translateY(-8px);
-    width: 32px;
-    right: 0;
-  }
-
-  .nav-toggle > .bar::after {
-    transform: translateY(8px);
-    width: 32px;
-    right: 0;
-  }
-
-  .nav-toggle.open > .bar {
-    transform: translateX(-40px);
-    background: transparent;
-  }
-
-  .nav-toggle.open > .bar::before {
-    transform: rotate(45deg) translate(26px, -26px);
-    width: 32px;
-  }
-
-  .nav-toggle.open > .bar::after {
-    transform: rotate(-45deg) translate(26px, 26px);
+  @media only screen and (max-width: 980px) {
+    .Navbar {
+      .nav-items {
+        font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
+        transform: translateX(-100%);
+        backdrop-filter: blur(12px);
+        background: #efefefd0;
+        flex-direction: column;
+        transition: all 0.45s;
+        position: absolute;
+        font-weight: 600;
+        margin-right: 0;
+        height: 100dvh;
+        display: flex;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        a::before {
+          background: transparent;
+        }
+        .nav-items-button {
+          font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
+          background-color: transparent;
+          border-radius: 2rem;
+          font-weight: 600;
+          padding: 0 1rem;
+          height: 2rem;
+          &:hover,
+          &:focus-visible,
+          &:focus {
+            color: $ui-darkest;
+          }
+          &:before,
+          &:after {
+            background: transparent;
+            border-radius: 2rem;
+          }
+        }
+        .nav-items-pesquisar {
+          font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
+          border: 2px solid $ui-darkest;
+          text-align: center;
+          color: $ui-darkest;
+          font-weight: 600;
+          margin: 0 auto;
+        }
+      }
+      .nav-items.open {
+        transform: translateX(0);
+      }
+      .nav-toggle {
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        display: flex;
+        height: 50px;
+        width: 50px;
+        .bar {
+          transition: all 200ms ease-in-out;
+          background: $ui-darker;
+          position: relative;
+          border-radius: 2px;
+          width: 32px;
+          height: 2px;
+          right: 0;
+          &::before,
+          &::after {
+            transition: all 200ms ease-in-out;
+            background: $ui-darker;
+            position: absolute;
+            border-radius: 2px;
+            content: "";
+            height: 2px;
+          }
+        }
+        .bar::before {
+          transform: translateY(-8px);
+          width: 32px;
+          right: 0;
+        }
+        .bar::after {
+          transform: translateY(8px);
+          width: 32px;
+          right: 0;
+        }
+      }
+      .nav-toggle.open {
+        .bar {
+          transform: translateX(-40px);
+          background: transparent;
+          &::before {
+            transform: rotate(45deg) translate(26px, -26px);
+            width: 32px;
+          }
+          &::after {
+            transform: rotate(-45deg) translate(26px, 26px);
+          }
+        }
+      }
+    }
   }
 }
