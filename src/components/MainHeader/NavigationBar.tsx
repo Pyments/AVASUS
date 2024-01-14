@@ -19,11 +19,11 @@ const NavigationBar = () => {
           </span>
           <div className={`nav-items ${isOpen && "open"}`}>
             <Link to="/AVASUS/">Início</Link>
-            <Link to="/AVASUS/sobre">Sobre</Link>
+            <Link to="#">Sobre</Link>
             <Link to="/AVASUS/cursos">Cursos</Link>
             <Link to="/AVASUS/parceiros">Parceiros</Link>
             <Link to="/AVASUS/transparencia">Transparência</Link>
-            <Link to="/AVASUS/contato">Contato</Link>
+            <Link to="#">Contato</Link>
             <input
               className="nav-items-pesquisar"
               type="text"
