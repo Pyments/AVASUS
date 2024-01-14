@@ -1,4 +1,3 @@
-
 # AVASUS
 
 ### Projeto REVELA - Desenvolvimento Científico e Tecnológico Aplicado a Sclerose Lateral Amiotrófioca
@@ -143,6 +142,3 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
-
-
-
