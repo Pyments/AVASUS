@@ -20,25 +20,11 @@ const Parceiros_big = () => {
     return data;
   };
 
-  const { isLoading, error, data, isFetching } = useQuery({
+  const { data } = useQuery({
     queryKey: ["queryParceirosBig", page],
     queryFn: () => fetchParceiros(page),
     placeholderData: keepPreviousData,
   });
-
-  if (isLoading || isFetching) {
-    return (
-      <p style={{ color: "black", fontSize: "30px", marginTop: "20px" }}>
-        Carregando Modulos....
-      </p>
-    );
-  } else if (error) {
-    return (
-      <p style={{ color: "black", fontSize: "30px", marginTop: "20px" }}>
-        Error: {error.message}
-      </p>
-    );
-  }
 
   return (
     <>

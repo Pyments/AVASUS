@@ -55,7 +55,7 @@ nav {
       }
       .nav-items-pesquisar {
         all: unset;
-        border: 2px solid $ui-lighter;
+        border: 2px solid $ui-light;
         transition: all 250ms ease;
         margin-right: 0.3rem;
         border-radius: 2rem;
@@ -80,12 +80,14 @@ nav {
   @media only screen and (max-width: 980px) {
     .Navbar {
       .nav-items {
+        font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
         transform: translateX(-100%);
         backdrop-filter: blur(12px);
         background: #efefefd0;
         flex-direction: column;
         transition: all 0.45s;
         position: absolute;
+        font-weight: 600;
         margin-right: 0;
         height: 100dvh;
         display: flex;
@@ -96,9 +98,10 @@ nav {
           background: transparent;
         }
         .nav-items-button {
-          font-size: clamp(0.1rem, 0.1rem + 1vw, 1rem);
+          font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
           background-color: transparent;
           border-radius: 2rem;
+          font-weight: 600;
           padding: 0 1rem;
           height: 2rem;
           &:hover,
@@ -113,8 +116,11 @@ nav {
           }
         }
         .nav-items-pesquisar {
+          font-size: clamp(0.1rem, 0.6rem + 1vw, 2rem);
           border: 2px solid $ui-darkest;
           text-align: center;
+          color: $ui-darkest;
+          font-weight: 600;
           margin: 0 auto;
         }
       }
