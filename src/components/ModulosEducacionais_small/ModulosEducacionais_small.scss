@@ -59,7 +59,7 @@ section {
             width: 10rem;
           }
           .modulo-matriculados {
-            justify-content: left;
+            justify-content: center;
             font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
             > img {
               width: fit-content;
@@ -71,7 +71,7 @@ section {
             }
           }
           .modulo-duracao {
-            justify-content: left;
+            justify-content: center;
             font-size: clamp(0.1rem, 0.3rem + 1vw, 1.5rem);
             > img {
               width: fit-content;
