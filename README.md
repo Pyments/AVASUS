@@ -54,15 +54,15 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 
 - [x] CA#01 Exibir menu de navegação, seção de destaques,seção de listagem de módulos educacionais, seção de parcerias e rodapé com links.
 
-![H1CA01](./src/assets/docs-src/H1/CA#01.png)
+![H1CA01](./src/assets/docs-src/H1/CA01.png)
 
 - [X] CA#02 Na seção de listagem de módulos educacionais, mostrar 3 módulos por aba. Os módulos mostrados devem ser recuperados da API.
 
-![H1CA02](./src/assets/docs-src/H1/CA#02.png)
+![H1CA02](./src/assets/docs-src/H1/CA02.png)
 
 - [x] CA#03: A barra de navegação superior deve ficar fixa no topo ao rolar a página.
 
-![H1CA03](./src/assets/docs-src/H1/CA#03.png)
+![H1CA03](./src/assets/docs-src/H1/CA03.png)
 
 - ### História Usuário #2 - Página de listagem de módulos educacionais:
 
@@ -72,19 +72,19 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 
 - [x] CA#01: Separar os módulos educacionais por categoria.
 
-![H2CA01](./src/assets/docs-src/H2/CA#01.png)
+![H2CA01](./src/assets/docs-src/H2/CA01.png)
 
 - [x] CA#02: Ordenar e filtrar os módulos educacionais em suas categorias.
 
-![H2CA02](./src/assets/docs-src/H2/CA#02.png)
+![H2CA02](./src/assets/docs-src/H2/CA02.png)
 
 - [x] CA#03: A listagem deve ser paginada.
 
-![H2CA03](./src/assets/docs-src/H2/CA#03.png)
+![H2CA03](./src/assets/docs-src/H2/CA03.png)
 
 - [x] CA#04: Exibir total de módulos e a quantidade de módulos mostrados no momento.
 
-![H2CA04](./src/assets/docs-src/H2/CA#04.png)
+![H2CA04](./src/assets/docs-src/H2/CA04.png)
 
 - ### História Usuário #3 - Página de informação sore o módulo educacional:
 
@@ -92,11 +92,11 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 
 - [x] CA#01: Exibir um cabeçalho com o nome, parceiros e imagem de capa do módulo educacional.
 
-![H3CA01](./src/assets/docs-src/H3/CA#01.png)
+![H3CA01](./src/assets/docs-src/H3/CA01.png)
 
 - [x] CA#02: Exibir seções de informações gerais, sobre o curo, objetivos, recursos educacionais e créditos.
 
-![H3CA02](./src/assets/docs-src/H3/CA#02.png)
+![H3CA02](./src/assets/docs-src/H3/CA02.png)
 
 - ### História Usuário #4 - Página de listagem dos parceiros:
 
@@ -104,11 +104,11 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 
 - [x] CA#01: A listagem deve ser paginada.
 
-![H4CA01](./src/assets/docs-src/H4/CA#01.png)
+![H4CA01](./src/assets/docs-src/H4/CA01.png)
 
 - [x] CA#02: Exibir total de parceiros e a quantidade de parceiros mostrado no momento.
 
-![H4CA02](./src/assets/docs-src/H4/CA#02.png)
+![H4CA02](./src/assets/docs-src/H4/CA02.png)
 
 - ### História Usuário #5 - Página de transparência:
 
@@ -116,13 +116,13 @@ Todos os campos de datas e números recuperados da API devem ser tratados para e
 
 - [x] CA#01: Exibição de dados gerais.
 
-![H5CA01](./src/assets/docs-src/H5/CA#01.png)
+![H5CA01](./src/assets/docs-src/H5/CA01.png)
 
 - [ ] CA#02: Mapa interativo com usuários por estado.
 
 - [x] CA#03: Gráfio de usuários por curso.
 
-![H5CA03](./src/assets/docs-src/H5/CA#03.png)
+![H5CA03](./src/assets/docs-src/H5/CA03.png)
 
 - [x] CA#04: Todos os dados devem ser recuperados da API.
  
